@@ -6,11 +6,7 @@ KUPEA
    :maxdepth: 1
    :caption: Civil Engineering
    
-   Civil: Construction <./PE_Civil_Construction>
-   Civil: Geotechnical <./PE_Civil_Geotechnical>
-   Civil: Structural <./PE_Civil_Structural>
-   Civil: Transportation <./PE_Civil_Transportation>
-   Civil: Water Resources and Environmental <./PE_Civil_Water>
+   Civil: 
 
 .. toctree::
    :maxdepth: 1
