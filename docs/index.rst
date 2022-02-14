@@ -10,7 +10,7 @@ Korea-US Professional Engineer Association
    :maxdepth: 1
    :caption: About Us
    
-   Vision & Mission <./Objective>
+   Vision & Mission <./objective>
 
 .. toctree::
    :maxdepth: 2
