@@ -28,7 +28,6 @@ Korea-US Professional Engineer Association
    :maxdepth: 1
    :caption: Activity
    
-   Plan for 2021 <./Plan_2021>
    Plan for 2022 <./Plan_2022>
 
 
