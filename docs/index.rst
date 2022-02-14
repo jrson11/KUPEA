@@ -1,6 +1,8 @@
 KUPEA
 ======
 
+.. image:: ../images/KUPEA_logo.jpg
+   :width: 800
 
 .. toctree::
    :maxdepth: 1
