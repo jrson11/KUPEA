@@ -1,7 +1,7 @@
 KUPEA
 ======
 
-.. image:: ../images/KUPEA_logo.jpg
+.. image:: ../images/KUPEA_logo.JPEG
    :width: 800
 
 .. toctree::
