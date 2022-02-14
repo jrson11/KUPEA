@@ -5,7 +5,7 @@ KUPEA
    :width: 800
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Disciplines
    
    Civil <./PE_Civil>
@@ -15,6 +15,6 @@ KUPEA
    :maxdepth: 1
    :caption: Plan
    
-
+   Plan for 2022: https://docs.google.com/spreadsheets/d/1vOyI_xOISVsHqsaUpNLf2quc4aeNXozsPASNjSGccCI/htmlview 
    
 
