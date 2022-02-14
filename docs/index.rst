@@ -1,7 +1,7 @@
 KUPEA
 ======
 
-Korea-US Professional Engineer Associate
+Korea-US Professional Engineer Association
 
 .. image:: ../images/KUPEA_logo.JPEG
    :width: 800
@@ -16,7 +16,7 @@ Korea-US Professional Engineer Associate
    
 .. toctree::
    :maxdepth: 1
-   :caption: Plan
+   :caption: Activities
    
    Plan for 2021 <./Plan_2021>
    Plan for 2022 <./Plan_2022>
