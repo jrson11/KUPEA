@@ -21,7 +21,9 @@ Korea-US Professional Engineer Association
    Electrical and Computer<./PE_Elec>
    Fire Protection <./PE_Fire>
    Mechanical <./PE_Mech>
-   
+   Naval Architecture and Marine Engineering <./PE_Naval>
+   Petroleum <./PE_Pet>
+
 .. toctree::
    :maxdepth: 1
    :caption: Activity
