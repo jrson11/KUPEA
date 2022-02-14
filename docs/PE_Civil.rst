@@ -5,31 +5,31 @@ PE Civil Engineering
 - Main Leader: xxx (xxx@gmail.com)
 
 
-1. Civil: Construction 
+Civil: Construction 
 ----------------------
 
 - Number of Members: 0
 - Sub Leader: xxx
 
-2. Civil: Geotechnical 
+Civil: Geotechnical 
 ----------------------
 
 - Number of Members: 0
 - Sub Leader: xxx
 
-3. Civil: Structural
+Civil: Structural
 ---------------------
 
 - Number of Members: 0
 - Sub Leader: xxx
 
-4. Civil: Transportation
+Civil: Transportation
 ------------------------
 
 - Number of Members: 0
 - Sub Leader: xxx
 
-5. Civil: Water Resources and Environmental 
+Civil: Water Resources and Environmental 
 -------------------------------------------
 
 - Number of Members: 0
