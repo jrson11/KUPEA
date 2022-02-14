@@ -1,4 +1,4 @@
-PE_Civil
+PE Civil Engineering
 =====================
 
 - Number of Members: 100
