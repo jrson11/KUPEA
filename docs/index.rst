@@ -4,14 +4,15 @@ KUPEA
 
 .. toctree::
    :maxdepth: 1
-   :caption: Civil Engineering
+   :caption: Disciplines
    
-   Civil: 
-
+   Civil <./PE_Civil>
+   Electrical and Computer<./PE_Elec>
+   
 .. toctree::
    :maxdepth: 1
-   :caption: Electrical and Computer
+   :caption: Plan
    
-   Electrical and Computer: Computer Engineering <./PE_Elec_Computer>
-   Electrical and Computer: Electronics, Controls, and Communications <./PE_Elec_Electronics>
-   Electrical and Computer: Power <./PE_Elec_Power>
+
+   
+
