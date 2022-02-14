@@ -10,8 +10,7 @@ Korea-US Professional Engineer Association
    :maxdepth: 1
    :caption: About Us
    
-   Vision & Mission <./Int_Vision>
-   Committee <./Int_Committee>
+   Introduction <./Intro>
 
 .. toctree::
    :maxdepth: 2
