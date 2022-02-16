@@ -20,6 +20,20 @@ Civil: Geotechnical
    - 국적불명/TX/Geotech/구조설계
    - 꿀밤/TX/토질/건설사
    - 글로벌토목인/TX/지반/해양지반조사
+   
+- Topics for continuing education
+   - Pile Design and Construction Practice
+   - Soil mechanics
+   - Rock mechanics
+   - Geotechnical foundation analysis for LRFD
+   - Probabilistic analysis and risk assessment
+   - Engineering for geohazards
+   - Ground modification and soil improvement
+   - Site investigations and Engineering parameters
+   - Numerical modeling in FLAC3D
+   - Numerical modeling in Plaxis2D
+   - Numerical modeling in Slope/W
+   - Numerical modeling in Abaqus
 
 Civil: Structural
 ---------------------
