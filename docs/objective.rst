@@ -15,6 +15,6 @@ The organization objectives are to
 Committee
 ----------
 
-- 글공
+- 글공(전기)
 - 글로벌토목인
 - (기계PE 지원자 모집중)
