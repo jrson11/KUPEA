@@ -8,7 +8,7 @@ Civil: Construction
 ----------------------
 
 - Members
-    - Edwin/KY/토목시공/감리
+  - Edwin/KY/토목시공/감리
     - John/TX/Civil/Plant
     - 보리봉/한국/토목시공/EPC
     - 주주람/한국/토목시공/건설사
