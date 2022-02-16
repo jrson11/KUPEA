@@ -1,7 +1,7 @@
 PE Civil Engineering
 =====================
 
-- Number of Members: 100
+- Number of Members: 11
 - Main Leader: 글토 (glocivilngineer at gmail dot com)
 
 Civil: Construction 
