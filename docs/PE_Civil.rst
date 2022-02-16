@@ -34,6 +34,7 @@ Civil: Geotechnical
    - Numerical modeling in Plaxis2D
    - Numerical modeling in Slope/W
    - Numerical modeling in Abaqus
+   - Python for Excel automation
 
 Civil: Structural
 ---------------------
