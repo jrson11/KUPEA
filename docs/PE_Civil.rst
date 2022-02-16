@@ -25,11 +25,11 @@ Civil: Geotechnical
    - Pile Design and Construction Practice
    - Soil mechanics
    - Rock mechanics
-   - Geotechnical foundation analysis for LRFD
+   - Foundation analysis for LRFD
    - Probabilistic analysis and risk assessment
    - Engineering for geohazards
    - Ground modification and soil improvement
-   - Site investigations and Engineering parameters
+   - Site investigations and geotechnical parameters
    - Numerical modeling in FLAC3D
    - Numerical modeling in Plaxis2D
    - Numerical modeling in Slope/W
