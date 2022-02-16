@@ -16,17 +16,19 @@ Civil: Construction
 Civil: Geotechnical 
 ----------------------
 
-- 국적불명/TX/Geotech/구조설계
-- 꿀밤/TX/토질/건설사
-- 글로벌토목인/TX/지반/해양지반조사
+- Members
+   - 국적불명/TX/Geotech/구조설계
+   - 꿀밤/TX/토질/건설사
+   - 글로벌토목인/TX/지반/해양지반조사
 
 Civil: Structural
 ---------------------
 
-- 돌종/한국/구조/설계
-- 모멘트/KY/Structural/EPC
-- 도깨비/한국/구조/설계
-- 구조/TX/구조/설계
+- Members
+   - 돌종/한국/구조/설계
+   - 모멘트/KY/Structural/EPC
+   - 도깨비/한국/구조/설계
+   - 구조/TX/구조/설계
 
 Civil: Transportation
 ------------------------
