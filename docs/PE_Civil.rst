@@ -16,7 +16,8 @@ Civil: Construction
 - Topics for continuing education
    - AutoCAD Civil 3D for civil engineering
    - Workflows within Autodesk infraworks
-   
+   - Python for Excel automation
+
 Civil: Geotechnical 
 ----------------------
 
@@ -37,8 +38,6 @@ Civil: Geotechnical
    - Numerical modeling in FLAC3D
    - Numerical modeling in Plaxis2D
    - Numerical modeling in Slope/W
-   - Numerical modeling in Abaqus
-   - Python for Excel automation
 
 Civil: Structural
 ---------------------
@@ -58,6 +57,7 @@ Civil: Structural
    - Earthquake engineering
    - Structural health monitoring
    - Fatigue
+   - Numerical modeling in Abaqus
 
 Civil: Transportation
 ------------------------
