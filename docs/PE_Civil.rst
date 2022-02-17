@@ -12,7 +12,11 @@ Civil: Construction
    - John/TX/Civil/Plant
    - 보리봉/한국/토목시공/EPC
    - 주주람/한국/토목시공/건설사
-
+   
+- Topics for continuing education
+   - AutoCAD Civil 3D for civil engineering
+   - Workflows within Autodesk infraworks
+   
 Civil: Geotechnical 
 ----------------------
 
@@ -44,6 +48,16 @@ Civil: Structural
    - 모멘트/KY/Structural/EPC
    - 도깨비/한국/구조/설계
    - 구조/TX/구조/설계
+
+- Topics for continuing education
+   - AASHTO LRFD bridge design specifications
+   - Design of concrete and steel structure utilising SAP2000
+   - Seismic assessment & retrofitting of RC structures
+   - Offshore structural analysis
+   - Prestressed concrete bridges
+   - Earthquake engineering
+   - Structural health monitoring
+   - Fatigue
 
 Civil: Transportation
 ------------------------
