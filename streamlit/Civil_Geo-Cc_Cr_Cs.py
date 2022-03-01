@@ -31,7 +31,7 @@ else:
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
-Px = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 25) 
+Px = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 20) 
 Pc = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 102) 
 Pr = st.sidebar.selectbox('Index of Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
