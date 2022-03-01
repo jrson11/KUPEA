@@ -41,7 +41,9 @@ Cs1000 = st.sidebar.slider('Cs (Swelling Index) * 1000', 0, 400, 55)
 Cc = Cc1000 / 1000
 Cr = Cr1000 / 1000
 Cs = Cs1000 / 1000
-st.sidebar.markdown('#### Pre-consolidation Pressure')
+st.sidebar.markdown('#### Casagrande Method')
+Ca1000 = st.sidebar.slider('Tangential slope) * -1000', 0, 400, 235)
+Ca1 = Ca1000 / -1000
 log_Pc = st.sidebar.slider('log10(Pc)', 0.0, 5.0, 2.5) 
 Pc_kPa = np.exp(log_Pc)
 Pc_MPa = Pc_kPa / 1000
@@ -64,8 +66,8 @@ Cr_y2 = find_y2(np.log10(x[Pr]),y[Pr],Cr,np.log10(xmax))
 Cs_y2 = find_y2(np.log10(x[Pr]),y[Pr],Cs,np.log10(xmax))
 
 ## Casagrande method
-tan_slope = (y[Px]-y[Px+2])/(np.log10(x[Px])-np.log10(x[Px+2]))
-Ca1 = tan_slope*-1
+#tan_slope = (y[Px]-y[Px+2])/(np.log10(x[Px])-np.log10(x[Px+2]))
+#Ca1 = tan_slope*-1
 Ca1_y2 = find_y2(np.log10(x[Px]),y[Px],Ca1,np.log10(xmax))
 Ca2 = Ca1 / 2
 Ca2_y2 = find_y2(np.log10(x[Px]),y[Px],Ca2,np.log10(xmax))
