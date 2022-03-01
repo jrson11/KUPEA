@@ -66,6 +66,8 @@ Cs_y2 = find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))
 tan_slope = (y[Px]-y[Px+3])/(np.log(x[Px])-np.log(x[Px+3]))
 Ca1 = tan_slope*-1
 Ca1_y2 = find_y2(np.log(x[Px]),y[Px],Ca1,np.log(xmax))
+Ca2 = Ca1 / 2
+Ca2_y2 = find_y2(np.log(x[Px]),y[Px],Ca2,np.log(xmax))
 
 
 # Plot -----------------------------------------------
@@ -87,6 +89,7 @@ plt.text(np.log(xmax)-1,Cr_y2,'Cr: '+str(round(Cr,3)))
 plt.text(np.log(xmax)-1,Cs_y2,'Cs: '+str(round(Cs,3)))
 ## Casagrande
 plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca1_y2], C='grey')
+plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca2_y2], C='grey', '--')
 
 ## Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
