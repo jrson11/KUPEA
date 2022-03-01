@@ -79,7 +79,7 @@ plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
 plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
 ## Lines
-plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],y[Px]], 'k-')
+plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],y[Px]], 'k-', linewidth=1.0)
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],Cc_y2], 'r--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],Cr_y2], 'm--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],Cs_y2], 'y--')
@@ -87,7 +87,7 @@ plt.text(np.log(xmax)-1,y[Pc],'Cc: '+str(round(Cc,3)))
 plt.text(np.log(xmax)-1,Cr_y2,'Cr: '+str(round(Cr,3)))
 plt.text(np.log(xmax)-1,Cs_y2,'Cs: '+str(round(Cs,3)))
 ## Casagrande
-plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca1_y2], C='grey')
+plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca1_y2], C='grey', linewidth=0.5)
 plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca2_y2], C='grey', linestyle='--', linewidth=0.5)
 
 ## Pc
