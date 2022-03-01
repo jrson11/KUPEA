@@ -15,7 +15,7 @@ nx = len(x)
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
-#Px = st.sidebar.selectbox('Index of max curvature point', ([0,1,2,3])) 
+Px = st.sidebar.selectbox('Index of max curvature point', ([0,1,2,3])) 
 #Pc = st.sidebar.selectbox('Index of max curvature point', ([0,1,2,3])) 
 #Pr = st.sidebar.selectbox('Index of max curvature point', ([0,1,2,3])) 
 st.sidebar.markdown('#### Seclect Index')
