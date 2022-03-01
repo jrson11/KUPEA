@@ -37,7 +37,7 @@ Cc = Cc1000 / 1000
 Cr = Cr1000 / 1000
 Cs = Cs1000 / 1000
 st.sidebar.markdown('#### Pre-consolidation Pressure')
-Pc_kPa = st.sidebar.slider('Pc [kPa]', 0.0, 500.0, 100.0) 
+Pc_kPa = st.sidebar.slider('Pc [kPa]', 0.0, 500.0, 75.0) 
 Pc_MPa = Pc_kPa / 1000
 
 def find_y2(x1,y1,C,x2):
