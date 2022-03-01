@@ -42,7 +42,8 @@ Cc = Cc1000 / 1000
 Cr = Cr1000 / 1000
 Cs = Cs1000 / 1000
 st.sidebar.markdown('#### Pre-consolidation Pressure')
-Pc_kPa = st.sidebar.slider('Pc [kPa]', 0.0, 500.0, 75.0) 
+log_Pc = st.sidebar.slider('log(Pc)', 0.0, 5.0, 2.5) 
+Pc_kPa = np.exp(log_Pc)
 Pc_MPa = Pc_kPa / 1000
 
 ## Function to plot lines
