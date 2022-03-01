@@ -35,13 +35,17 @@ Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)  
 
 ## Plot
+xmin = min(x)
+xmax = max(x)
+ymin = min(y)
+ymax = max(y)
+
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log(x),y, '.-')
 plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
 plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
-
 plt.plot([1,2],[0.6,0.6], 'r--')
 #
 plt.xlabel('log(x)')
