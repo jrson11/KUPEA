@@ -27,6 +27,8 @@ Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(x,y, '.-')
+plt.plot([0,0],[0.6,0.6], 'r--')
+#
 plt.xlabel('x')
 plt.ylabel('y')
 plt.xscale('log')
