@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # Initialization ----------------------------------------
 st.markdown('## Tangent Lines from log(x)-y plot')
-password = st.sidebar.text_input('Password?', 'password')
+password = st.sidebar.text_input('Password to Continue', 'password')
 
 st.sidebar.markdown('#### Cc')
 st.sidebar.markdown('#### Cr')
