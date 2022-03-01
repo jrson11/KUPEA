@@ -48,17 +48,6 @@ xmax = max(x)
 ymin = min(y)
 ymax = max(y)
 
-x1 = np.log(x[Pc])
-y1 = y[Pc]
-a = Cc*-1
-x2 = np.log(xmin)
-#y2 = a*x2 - a*x1 + y1
-#st.text(np.log(x[Pc]))
-#st.text(y[Pc])
-#st.text(a)
-y2 = find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))
-st.text(y2)
-
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log(x),y, '.-')
@@ -69,6 +58,7 @@ plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.l
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
+plt.xlim([xmin,xmax])
 #plt.xscale('log')
 plt.grid(linestyle='-', alpha=0.5)
 plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
