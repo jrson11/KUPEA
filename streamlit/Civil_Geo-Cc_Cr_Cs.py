@@ -15,7 +15,7 @@ nx = len(x)
 # Membership --------------------------------------------
 if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
-  st.markdown('#### You can upload your $$CSV$$ file with 3 columns [Name, X, Y]')
+  st.markdown('#### You can upload your $CSV$ file with 3 columns [Name, X, Y]')
   #
   st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
   
