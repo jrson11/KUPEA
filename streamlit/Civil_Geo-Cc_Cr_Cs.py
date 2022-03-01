@@ -42,7 +42,7 @@ Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 ## Plot
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
-plt.plot(x,y, '.-')
+plt.plot(df.X,df.Y, '.-')
 plt.plot([10,10],[0.6,0.6], 'rx')
 plt.plot([0,100],[0.6,0.6], 'r--')
 #
