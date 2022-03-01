@@ -35,11 +35,11 @@ Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 
 def find_y2(x1,y1,C,x2):
-  # y1 = a*x1 + b
-  # b = a*x1 - y1
-  # y2 = a*x2 + a*x1 - y1
-  a = C*-1
-  y2 = a*x2 + a*x1 - y1
+  # y1 = a x1 + b
+  # b = y1 - a x1
+  # y2 = a x2 + b = a x2 -a x1 + y1
+    a = C*-1
+  y2 = a*x2 - a*x1 + y1
   return y2
 
 ## Plot
@@ -52,7 +52,7 @@ x1 = np.log(x[Pc])
 y1 = y[Pc]
 a = Cc*-1
 x2 = np.log(xmin)
-y2 = a*x2 + a*x1 - y1
+y2 = a*x2 - a*x1 + y1
 #st.text(np.log(x[Pc]))
 #st.text(y[Pc])
 #st.text(a)
