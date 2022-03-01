@@ -66,6 +66,8 @@ plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.l
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
 #
+plt.plot([np.log(Pc_MPa),np.log(Pc_MPa)],[y[Px],y[Px]], 'k-')
+#
 plt.xlabel('log(x)')
 plt.ylabel('y')
 plt.xlim([np.log(xmin)-0.5,np.log(xmax)+0.5])
