@@ -73,7 +73,6 @@ Ca2 = Ca1 / 2
 Ca2_y2 = find_y2(np.log10(x[Px]),y[Px],Ca2,np.log10(xmax))
 
 # Plot -----------------------------------------------
-
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log10(x),y, '.-', linewidth=1)
