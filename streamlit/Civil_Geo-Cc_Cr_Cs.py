@@ -44,7 +44,7 @@ Cs = Cs1000 / 1000
 st.sidebar.markdown('#### Casagrande Method')
 Ca1000 = st.sidebar.slider('Tangential slope * -1000', 0, 400, 75)
 Ca1 = Ca1000 / 1000
-log_Pc = st.sidebar.slider('log10(Pc)', 0.0, 2.0, 0.5) 
+log_Pc = st.sidebar.slider('log(Pc)', 0.0, 2.0, 0.5) 
 Pc_kPa = 10**(log_Pc)
 Pc_MPa = Pc_kPa / 1000
 
