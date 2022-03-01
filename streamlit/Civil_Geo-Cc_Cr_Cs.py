@@ -1,6 +1,6 @@
-# Purspose:
-# Name:
-# Author
+# Purspose: To find out engineering properties from soil lab testing data
+# Name: Civil_Geo-Cc_Cr_Cs.py
+# Author: glocivilngneer at gmail dot com
 # All right reserved
 
 import numpy as np
