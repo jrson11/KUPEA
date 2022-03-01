@@ -13,7 +13,6 @@ y = [0.749,0.75,0.75,0.751,0.75,0.748,0.747,0.746,0.743,0.741,0.741,0.74,0.737,0
 nx = len(x)
 
 # Membership --------------------------------------------
-
 if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
   st.text('Enjoy web app to analyze engineering parameters (Cc,Cr,and Cs)')
@@ -23,7 +22,8 @@ if password == st.secrets['db_password']:
 else:
   st.markdown('## Please join KUPEA')
   st.text('Only members can upload his own data to analyze engineering parameters (Cc,Cr,and Cs)')
-
+  st.text('Error Message:')
+  kkk
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
