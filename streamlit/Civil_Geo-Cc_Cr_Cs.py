@@ -35,14 +35,14 @@ Px = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 20)
 Pc = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 102) 
 Pr = st.sidebar.selectbox('Index of Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
-Cc1000 = st.sidebar.slider('Cc (Compression Index) * 1000', 0, 400, 235) 
-Cr1000 = st.sidebar.slider('Cr (Recompression Index) * 1000', 0, 400, 22) 
-Cs1000 = st.sidebar.slider('Cs (Swelling Index) * 1000', 0, 400, 55) 
+Cc1000 = st.sidebar.slider('Cc (Compression Index) * 1e3', 0, 400, 235) 
+Cr1000 = st.sidebar.slider('Cr (Recompression Index) * 1e3', 0, 400, 22) 
+Cs1000 = st.sidebar.slider('Cs (Swelling Index) * 1e3', 0, 400, 55) 
 Cc = Cc1000 / 1000
 Cr = Cr1000 / 1000
 Cs = Cs1000 / 1000
 st.sidebar.markdown('#### Casagrande Method')
-Ca1000 = st.sidebar.slider('Slope of tangential line at Max Curvature * -1000', 0, 400, 75)
+Ca1000 = st.sidebar.slider('Slope of tangential line at Max Curvature * -1e3', 0, 400, 75)
 Ca1 = Ca1000 / 1000
 log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (Pc)', 0.0, 2.0, 0.5) 
 Pc_kPa = 10**(log_Pc)
