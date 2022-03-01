@@ -66,13 +66,13 @@ plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.l
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
 #
-plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.05,y[Px]], 'k-')
+plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
 st.text(y[Px])
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
 plt.xlim([np.log(xmin)-0.5,np.log(xmax)+0.5])
-plt.ylim([ymin-0.05,ymax+0.05])
+plt.ylim([ymin-0.03,ymax+0.03])
 #plt.xscale('log')
 plt.grid(linestyle='-', alpha=0.5)
 plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
