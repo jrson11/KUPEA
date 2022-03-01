@@ -19,9 +19,9 @@ st.sidebar.markdown('#### Seclect Points')
 #Pc = st.sidebar.selectbox('Index of max curvature point', ([0,1,2,3])) 
 #Pr = st.sidebar.selectbox('Index of max curvature point', ([0,1,2,3])) 
 st.sidebar.markdown('#### Seclect Index')
-Cc = st.sidebar.slider('Cc', 0.0, 0.5, 0.0)  
-Cr = st.sidebar.slider('Cr', 0.0, 0.5, 0.0)  
-Cs = st.sidebar.slider('Cs', 0.0, 0.5, 0.0)  
+Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.0)  
+Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
+Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)  
 
 ## Plot
 fig = plt.figure(figsize = (5,5), dpi=100)
