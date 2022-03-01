@@ -88,6 +88,7 @@ plt.text(np.log(xmax)-1,y[Pc],'Cc: '+str(round(Cc,3)))
 plt.text(np.log(xmax)-1,Cr_y2,'Cr: '+str(round(Cr,3)))
 plt.text(np.log(xmax)-1,Cs_y2,'Cs: '+str(round(Cs,3)))
 ## Casagrande
+plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca_y2], C='grey')
 
 ## Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
