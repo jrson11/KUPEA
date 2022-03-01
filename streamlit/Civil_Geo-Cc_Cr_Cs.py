@@ -30,9 +30,10 @@ Px = st.sidebar.selectbox('Index of max curvature point', np.arange(nx), 20)
 Pc = st.sidebar.selectbox('Index of max Cc starting point', np.arange(nx), 105) 
 Pr = st.sidebar.selectbox('Index of max Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
-Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.4, 0.12)  
+Cc1000 = st.sidebar.slider('Cc: Compression Index * 1000', 0, 400, 120) 
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.2, 0.02)  
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.2, 0.0)
+Cc = Cc1000 / 1000
 
 def find_y2(x1,y1,C,x2):
   # y1 = a x1 + b
