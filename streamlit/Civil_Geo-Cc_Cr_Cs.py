@@ -19,7 +19,7 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.xscale('log')
 plt.grid(linestyle='--')
-plt.grid(b=True, which='minor', color='r', linestyle='--')
+plt.grid(which='minor', color='r', linestyle='--')
 #
 st.pyplot(fig)
 
