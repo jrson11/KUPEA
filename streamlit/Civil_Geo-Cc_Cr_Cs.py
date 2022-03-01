@@ -54,13 +54,18 @@ def find_y2(x1,y1,C,x2):
   y2 = a*x2 - a*x1 + y1
   return y2
 
-## Casagrande method
-
-# Plot -----------------------------------------------
 xmin = min(x)
 xmax = max(x)
 ymin = min(y)
 ymax = max(y)
+Cc_y2 = find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))
+Cr_y2 = find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))
+Cs_y2 = find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))
+
+## Casagrande method
+
+# Plot -----------------------------------------------
+
 
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
