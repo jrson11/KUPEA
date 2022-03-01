@@ -40,6 +40,7 @@ st.sidebar.markdown('#### Pre-consolidation Pressure')
 Pc_kPa = st.sidebar.slider('Pc [kPa]', 0.0, 500.0, 75.0) 
 Pc_MPa = Pc_kPa / 1000
 
+## Function to plot lines
 def find_y2(x1,y1,C,x2):
   # y1 = a x1 + b
   # b = y1 - a x1
@@ -48,7 +49,9 @@ def find_y2(x1,y1,C,x2):
   y2 = a*x2 - a*x1 + y1
   return y2
 
-## Plot
+## Casagrande method
+
+# Plot -----------------------------------------------
 xmin = min(x)
 xmax = max(x)
 ymin = min(y)
@@ -57,19 +60,19 @@ ymax = max(y)
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log(x),y, '.-')
-# Points
+## Points
 plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
 plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
-# Lines
+## Lines
 plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],y[Px]], 'k-')
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'r--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
-# Pc
+## Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
 plt.text(np.log(Pc_kPa)+0.1,ymin-0.02,'Pc = '+str(round(Pc_kPa)))
-#
+##
 plt.xlabel('log(x)')
 plt.ylabel('y')
 plt.xlim([np.log(xmin)-0.5,np.log(xmax)+0.5])
@@ -77,7 +80,7 @@ plt.ylim([ymin-0.03,ymax+0.03])
 #plt.xscale('log')
 plt.grid(linestyle='-', alpha=0.5)
 plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
-#
+##
 st.pyplot(fig)
 
 
