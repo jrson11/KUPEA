@@ -94,7 +94,7 @@ plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca1_y2], C='grey', linewidth=0.
 plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca2_y2], C='grey', linestyle='--', linewidth=0.5)
 ## Pc
 plt.plot([np.log10(Pc_kPa),np.log10(Pc_kPa)],[ymin-0.03,y[Px]], 'k-', linewidth=1)
-plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'Pc='+str(round(Pc_kPa)))
+plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'Pc='+str(round(Pc_kPa,1)))
 ##
 plt.xlabel('log(x)')
 plt.ylabel('y')
