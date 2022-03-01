@@ -52,6 +52,8 @@ ymax = max(y)
 #y2 = np.log(y[Pc])
 #a = -Cc
 st.text(np.log(x[Pc]))
+st.text(y[Pc])
+st.text(a)
 
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
