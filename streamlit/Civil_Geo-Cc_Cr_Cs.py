@@ -8,8 +8,11 @@ st.markdown('## Tangent Lines from log(x)-y plot')
 password = st.sidebar.text_input('Password to Continue', 'password')
 
 st.sidebar.markdown('#### Cc')
+Cc = st.sidebar.slider('Cc', 0.0, 0.5, 0.0)  
 st.sidebar.markdown('#### Cr')
+Cr = st.sidebar.slider('Cr', 0.0, 0.5, 0.0)  
 st.sidebar.markdown('#### Cs')
+Cs = st.sidebar.slider('Cs', 0.0, 0.5, 0.0)  
 
 # Default -----------------------------------------------
 ## Data
