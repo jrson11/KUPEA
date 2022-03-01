@@ -34,7 +34,7 @@ Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.2)
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 
-def find_y2(x1,y1,C):
+def find_y2(x1,y1,C,x2):
   # y1 = a*x1 + b
   # b = a*x1 - y1
   # y2 = a*x2 + a*x1 - y1
@@ -55,8 +55,8 @@ y2 = a*x2 + a*x1 - y1
 #st.text(np.log(x[Pc]))
 #st.text(y[Pc])
 #st.text(a)
-#y2 = find_y2(np.log(x[Pc]),y[Pc],Cc)
-#st.text(y2)
+y2 = find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))
+st.text(y2)
 
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
