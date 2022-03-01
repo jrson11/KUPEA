@@ -74,6 +74,8 @@ plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],y[Px]], 'k-')
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'r--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
+plt.text(np.log(xmax)-0.1,find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'Cc')
+
 ## Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
 plt.text(np.log(Pc_kPa)+0.1,ymin-0.02,'Pc = '+str(round(Pc_kPa)))
