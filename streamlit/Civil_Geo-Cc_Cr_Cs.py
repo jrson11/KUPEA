@@ -48,10 +48,10 @@ xmax = max(x)
 ymin = min(y)
 ymax = max(y)
 
-x1 = np.log(x[Pc])
-y2 = np.log(y[Pc])
-a = -Cc
-st.test(x1)
+#x1 = np.log(x[Pc])
+#y2 = np.log(y[Pc])
+#a = -Cc
+st.test(x[Pc])
 
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
