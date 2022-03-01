@@ -65,7 +65,7 @@ plt.plot(np.log(x),y, '.-')
 plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
 plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
-plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],0.6], 'r--')
+plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'r--')
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
