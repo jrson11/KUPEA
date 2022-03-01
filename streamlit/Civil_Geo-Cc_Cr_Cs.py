@@ -17,6 +17,7 @@ fig = plt.figure(figsize = (3,5), dpi=100)
 plt.plot(np.log(x),y, '.-')
 plt.xlabel('log(x)')
 plt.ylabel('y')
+plt.yscale('log')
 plt.grid(linestyle='dotted')
 #
 st.pyplot(fig)
