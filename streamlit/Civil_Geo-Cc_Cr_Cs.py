@@ -34,7 +34,7 @@ Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.0)
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 
-def b(x1,y1,C):
+def find_y2(x1,y1,C):
   # y1 = a*x1 + b
   # b = a*x1 - y1
   # y2 = a*x2 + a*x1 - y1
