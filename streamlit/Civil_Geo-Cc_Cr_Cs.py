@@ -64,7 +64,7 @@ Cr_y2 = find_y2(np.log10(x[Pr]),y[Pr],Cr,np.log10(xmax))
 Cs_y2 = find_y2(np.log10(x[Pr]),y[Pr],Cs,np.log10(xmax))
 
 ## Casagrande method
-tan_slope = (y[Px]-y[Px+3])/(np.log10(x[Px])-np.log10(x[Px+3]))
+tan_slope = (y[Px]-y[Px+2])/(np.log10(x[Px])-np.log10(x[Px+2]))
 Ca1 = tan_slope*-1
 Ca1_y2 = find_y2(np.log10(x[Px]),y[Px],Ca1,np.log10(xmax))
 Ca2 = Ca1 / 2
