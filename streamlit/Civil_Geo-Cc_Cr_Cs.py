@@ -33,6 +33,7 @@ st.pyplot(fig)
 
 # Membership --------------------------------------------
 def members():
+  st.text('ok')
 
 if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
