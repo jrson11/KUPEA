@@ -77,8 +77,8 @@ plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
 ## Lines
 plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],y[Px]], 'k-')
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],Cc_y2], 'r--')
-plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
-plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
+plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],Cr_y2], 'm--')
+plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],Cs_y2], 'y--')
 
 ## Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
