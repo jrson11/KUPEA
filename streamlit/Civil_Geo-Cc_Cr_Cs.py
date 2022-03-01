@@ -4,7 +4,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Initialization ----------------------------------------
-st.markdown('## Tangent Lines from log(x)-y plot')
+st.markdown('## Cc, Cr, Cs Lines from log(x)-y plot')
 password = st.sidebar.text_input('Password to Continue', 'password')
 
 ## Data
@@ -15,7 +15,7 @@ nx = len(x)
 # Membership --------------------------------------------
 if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
-  st.text('You can upload your CSV file with 3 columns [Name, X, Y]')
+  st.markdown('#### You can upload your CSV file with 3 columns [Name, X, Y]')
   #
   st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
   
