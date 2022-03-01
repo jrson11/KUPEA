@@ -57,16 +57,18 @@ ymax = max(y)
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log(x),y, '.-')
+# Points
 plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
 plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
-#
+# Lines
 plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],y[Px]], 'k-')
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'r--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
-#
+# Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
+plt.text(np.log(Pc_kPa),ymin-0.03,'Pc')
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
