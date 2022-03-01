@@ -42,7 +42,7 @@ Cc = Cc1000 / 1000
 Cr = Cr1000 / 1000
 Cs = Cs1000 / 1000
 st.sidebar.markdown('#### Casagrande Method')
-Ca1000 = st.sidebar.slider('Slope of tangential line at Max Curvature point* -1000', 0, 400, 75)
+Ca1000 = st.sidebar.slider('Slope of tangential line at Max Curvature * -1000', 0, 400, 75)
 Ca1 = Ca1000 / 1000
 log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (Pc)', 0.0, 2.0, 0.5) 
 Pc_kPa = 10**(log_Pc)
