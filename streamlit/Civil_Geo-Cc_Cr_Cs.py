@@ -22,8 +22,7 @@ if password == st.secrets['db_password']:
 else:
   st.markdown('## Please join KUPEA')
   st.text('Only members can upload his own data to analyze engineering parameters (Cc,Cr,and Cs)')
-  st.text('Error Message:')
-  kkk
+  
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
