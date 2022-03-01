@@ -58,7 +58,8 @@ plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.l
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
-plt.xlim([xmin,xmax])
+plt.xlim(np.log([xmin,xmax]))
+plt.ylim([ymin,ymax])
 #plt.xscale('log')
 plt.grid(linestyle='-', alpha=0.5)
 plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
