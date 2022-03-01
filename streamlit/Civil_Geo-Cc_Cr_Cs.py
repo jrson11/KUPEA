@@ -15,7 +15,7 @@ y = [0.749,0.75,0.75,0.751,0.75,0.748,0.747,0.746,0.743,0.741,0.741,0.74,0.737,0
 ## Plot
 fig = plt.figure(figsize = (5,5), dpi=300)
 plt.plot(np.log(x),y, '.-')
-plt.set_xlabel('log(x)')
+plt.xlabel('log(x)')
 #ax.set_xlabel('y')
 #plt.grid(linestyle='dotted')
 #
