@@ -32,7 +32,7 @@ else:
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
 Px = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 20) 
-Pc = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 100) 
+Pc = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 110) 
 Pr = st.sidebar.selectbox('Index of Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
 Cc1000 = st.sidebar.slider('Cc (Compression Index) * 1000', 0, 200, 95) 
