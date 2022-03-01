@@ -18,8 +18,8 @@ plt.plot(x,y, '.-')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.xscale('log')
-plt.grid(linestyle='dotted')
-plt.xaxis.grid(which='minor',linestype='dotted')
+plt.grid(linestyle='--')
+plt.grid(b=True, which='minor', color='r', linestyle='--')
 #
 st.pyplot(fig)
 
