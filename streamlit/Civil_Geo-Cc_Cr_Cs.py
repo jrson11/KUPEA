@@ -14,10 +14,10 @@ y = [0.749,0.75,0.75,0.751,0.75,0.748,0.747,0.746,0.743,0.741,0.741,0.74,0.737,0
 
 ## Plot
 fig = plt.figure(figsize = (3,5), dpi=100)
-plt.plot(np.log(x),y, '.-')
-plt.xlabel('log(x)')
+plt.plot(x,y, '.-')
+plt.xlabel('x')
 plt.ylabel('y')
-plt.yscale('log')
+plt.xscale('log')
 plt.grid(linestyle='dotted')
 #
 st.pyplot(fig)
