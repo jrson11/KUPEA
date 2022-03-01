@@ -38,7 +38,7 @@ def find_y2(x1,y1,C):
   # y1 = a*x1 + b
   # b = a*x1 - y1
   # y2 = a*x2 + a*x1 - y1
-  a = -C
+  a = C*-1
   y2 = a*x2 + a*x1 - y1
   return y2
 
@@ -50,10 +50,12 @@ ymax = max(y)
 
 #x1 = np.log(x[Pc])
 #y2 = np.log(y[Pc])
-a = Cc*-1
-st.text(np.log(x[Pc]))
-st.text(y[Pc])
-st.text(a)
+#a = Cc*-1
+#st.text(np.log(x[Pc]))
+#st.text(y[Pc])
+#st.text(a)
+y2 = find_y2(np.log(x[Pc]),y[Pc],Cc)
+st.text(y2)
 
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
