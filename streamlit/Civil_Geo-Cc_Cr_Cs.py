@@ -39,6 +39,9 @@ fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(x,y, '.-')
 plt.scatter(x[Px],y[Px], c='k', marker='x')
+plt.scatter(x[Pc],y[Pc], c='r', marker='x')
+plt.scatter(x[Pr],y[Pr], c='m', marker='x')
+
 plt.plot([0,100],[0.6,0.6], 'r--')
 #
 plt.xlabel('x')
