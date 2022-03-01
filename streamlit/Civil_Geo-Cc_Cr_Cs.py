@@ -30,7 +30,7 @@ Px = st.sidebar.selectbox('Index of max curvature point', np.arange(nx), 10)
 Pc = st.sidebar.selectbox('Index of max Cc starting point', np.arange(nx), nx-20) 
 Pr = st.sidebar.selectbox('Index of max Cr starting point', np.arange(nx), 60) 
 st.sidebar.markdown('#### Seclect Index')
-Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.0)  
+Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.2)  
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 
