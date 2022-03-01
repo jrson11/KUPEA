@@ -60,6 +60,7 @@ plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
 #
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'r--')
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
+plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
