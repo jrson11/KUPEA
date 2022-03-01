@@ -18,8 +18,8 @@ plt.plot(x,y, '.-')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.xscale('log')
-plt.grid(linestyle='--')
-plt.grid(which='minor', color='grey', linestyle='--')
+plt.grid(linestyle='-', alpha=0.5)
+plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
 #
 st.pyplot(fig)
 
