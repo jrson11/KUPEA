@@ -19,6 +19,7 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.xscale('log')
 plt.grid(linestyle='dotted')
+plt.xaxis.grid(which='minor',linestype='dotted')
 #
 st.pyplot(fig)
 
