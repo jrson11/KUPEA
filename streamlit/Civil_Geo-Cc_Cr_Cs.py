@@ -32,7 +32,15 @@ Pr = st.sidebar.selectbox('Index of max Cr starting point', np.arange(nx), 60)
 st.sidebar.markdown('#### Seclect Index')
 Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.0)  
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
-Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)  
+Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
+
+def b(x1,y1,C):
+  # y1 = a*x1 + b
+  # b = a*x1 - y1
+  # y2 = a*x2 + a*x1 - y1
+  a = -C
+  y2 = a*x2 + a*x1 - y1
+  return y2
 
 ## Plot
 xmin = min(x)
