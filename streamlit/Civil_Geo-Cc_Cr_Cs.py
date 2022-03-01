@@ -37,7 +37,7 @@ Cc = Cc1000 / 1000
 Cr = Cr1000 / 1000
 Cs = Cs1000 / 1000
 st.sidebar.markdown('#### Pre-consolidation Pressure')
-Pc_kPa = st.sidebar.slider('Pc * 1000', 0.0, 4000.0, 1000.0) 
+Pc_kPa = st.sidebar.slider('Pc [kPa_', 0.0, 4000.0, 1000.0) 
 Pc_MPa = Pc_kPa / 1000
 
 def find_y2(x1,y1,C,x2):
@@ -67,7 +67,7 @@ plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.l
 plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))], 'y--')
 #
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[y[Px],y[Px]], 'k-')
-st.text(np.log(Pc_MPa))
+st.text(np.log(Pc_kPa))
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
