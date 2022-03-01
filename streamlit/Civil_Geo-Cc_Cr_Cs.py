@@ -63,7 +63,7 @@ Cr_y2 = find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))
 Cs_y2 = find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))
 
 ## Casagrande method
-tan_slope = (y[Px]-y[Px+1])/(np.log(x[Px])-np.log(x[Px+1]))
+tan_slope = (y[Px]-y[Px+3])/(np.log(x[Px])-np.log(x[Px+3]))
 st.text(tan_slope)
 Ca = tan_slope*-1
 Ca_y2 = find_y2(np.log(x[Px]),y[Px],Ca,np.log(xmax))
