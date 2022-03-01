@@ -36,6 +36,6 @@ if password == st.secrets['db_password']:
   
 else:
   st.markdown('## Please join KUPEA')
-  st.text('Only KUPEA members can upload his own data to analyze engineering parameters (Cc,Cr,and Cs)')
+  st.markdown('#### Only KUPEA members can upload his own data to analyze engineering parameters (Cc,Cr,and Cs)')
 
   
