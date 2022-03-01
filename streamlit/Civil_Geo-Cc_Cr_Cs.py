@@ -15,8 +15,8 @@ y = [0.749,0.75,0.75,0.751,0.75,0.748,0.747,0.746,0.743,0.741,0.741,0.74,0.737,0
 ## Plot
 fig,ax = plt.subplot(1,1, figsize = (5,5), dpi=300)
 ax.plot(np.log(x),y, '.-')
-ax.set_xlabel('log(x)')
-ax.set_xlabel('y')
+#ax.set_xlabel('log(x)')
+#ax.set_xlabel('y')
 #plt.grid(linestyle='dotted')
 #
 st.pyplot(fig)
