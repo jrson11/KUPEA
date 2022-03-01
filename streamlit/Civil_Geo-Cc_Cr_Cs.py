@@ -51,6 +51,7 @@ ymax = max(y)
 x1 = np.log(x[Pc])
 y1 = y[Pc]
 a = Cc*-1
+y2 = a*x2 + a*x1 - y1
 #st.text(np.log(x[Pc]))
 #st.text(y[Pc])
 #st.text(a)
