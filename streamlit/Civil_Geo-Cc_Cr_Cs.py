@@ -74,7 +74,7 @@ Ca2_y2 = find_y2(np.log(x[Px]),y[Px],Ca2,np.log(xmax))
 
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
-plt.plot(np.log(x),y, '.-', linewidth=1)
+plt.plot(np.log10(x),y, '.-', linewidth=1)
 ## Points
 plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
