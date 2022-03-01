@@ -91,7 +91,7 @@ plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca1_y2], C='grey', linewidth=0.5)
 plt.plot([np.log(x[Px]),np.log(xmax)],[y[Px],Ca2_y2], C='grey', linestyle='--', linewidth=0.5)
 
 ## Pc
-plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
+plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-', linewidth=1)
 plt.text(np.log(Pc_kPa)+0.1,ymin-0.02,'Pc: '+str(round(Pc_kPa)))
 ##
 plt.xlabel('log(x)')
