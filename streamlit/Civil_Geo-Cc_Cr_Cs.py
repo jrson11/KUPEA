@@ -52,11 +52,11 @@ x1 = np.log(x[Pc])
 y1 = y[Pc]
 a = Cc*-1
 x2 = np.log(xmin)
-y2 = a*x2 - a*x1 + y1
+#y2 = a*x2 - a*x1 + y1
 #st.text(np.log(x[Pc]))
 #st.text(y[Pc])
 #st.text(a)
-#y2 = find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))
+y2 = find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))
 st.text(y2)
 
 fig = plt.figure(figsize = (5,5), dpi=100)
