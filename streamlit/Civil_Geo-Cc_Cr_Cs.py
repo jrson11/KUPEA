@@ -30,7 +30,7 @@ Px = st.sidebar.selectbox('Index of max curvature point', np.arange(nx), 20)
 Pc = st.sidebar.selectbox('Index of max Cc starting point', np.arange(nx), 105) 
 Pr = st.sidebar.selectbox('Index of max Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
-Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.2)  
+Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.12)  
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
 Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 
@@ -54,7 +54,9 @@ plt.plot(np.log(x),y, '.-')
 plt.scatter(np.log(x[Px]),y[Px], c='k', marker='x')
 plt.scatter(np.log(x[Pc]),y[Pc], c='r', marker='x')
 plt.scatter(np.log(x[Pr]),y[Pr], c='m', marker='x')
+#
 plt.plot([np.log(x[Pc]),np.log(xmin)],[y[Pc],find_y2(np.log(x[Pc]),y[Pc],Cc,np.log(xmin))], 'r--')
+plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],find_y2(np.log(x[Pr]),y[Pr],Cr,np.log(xmax))], 'm--')
 #
 plt.xlabel('log(x)')
 plt.ylabel('y')
