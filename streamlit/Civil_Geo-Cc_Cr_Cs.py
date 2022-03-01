@@ -65,10 +65,12 @@ Cs_y2 = find_y2(np.log(x[Pr]),y[Pr],Cs,np.log(xmax))
 ## Casagrande method
 tan_slope = (y[Px]-y[Px+1])/(np.log(x[Px])-np.log(x[Px+1]))
 st.text(tan_slope)
+Ca = tan_slope*-1
+Ca_y2 = find_y2(np.log(x[Px]),y[Px],Ca,np.log(xmax))
+st.text(Ca_y2)
 
 
 # Plot -----------------------------------------------
-
 
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
@@ -85,6 +87,8 @@ plt.plot([np.log(x[Pr]),np.log(xmax)],[y[Pr],Cs_y2], 'y--')
 plt.text(np.log(xmax)-1,y[Pc],'Cc: '+str(round(Cc,3)))
 plt.text(np.log(xmax)-1,Cr_y2,'Cr: '+str(round(Cr,3)))
 plt.text(np.log(xmax)-1,Cs_y2,'Cs: '+str(round(Cs,3)))
+## Casagrande
+
 ## Pc
 plt.plot([np.log(Pc_kPa),np.log(Pc_kPa)],[ymin-0.03,y[Px]], 'k-')
 plt.text(np.log(Pc_kPa)+0.1,ymin-0.02,'Pc: '+str(round(Pc_kPa)))
