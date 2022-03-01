@@ -90,7 +90,7 @@ plt.text(np.log10(xmax)-0.5,y[Pc]+0.05,'Cc='+str(round(Cc,3)))
 plt.text(np.log10(xmax)-0.5,Cr_y2+0.01,'Cr='+str(round(Cr,3)))
 plt.text(np.log10(xmax)-0.5,Cs_y2+0.01,'Cs='+str(round(Cs,3)))
 ## Casagrande
-plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca1_y2], C='grey', linewidth=0.5)
+plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca1_y2], C='k', linewidth=0.5)
 plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca2_y2], C='grey', linestyle='--', linewidth=0.5)
 ## Pc
 plt.plot([np.log10(Pc_kPa),np.log10(Pc_kPa)],[ymin-0.03,y[Px]], 'k-', linewidth=1)
