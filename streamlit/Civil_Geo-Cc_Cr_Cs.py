@@ -17,7 +17,7 @@ if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
   st.text('Enjoy web app to analyze engineering parameters (Cc,Cr,and Cs)')
   #
-  st.sidebar.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
+  st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
   
 else:
   st.markdown('## Please join KUPEA')
