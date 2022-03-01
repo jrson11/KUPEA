@@ -15,9 +15,9 @@ nx = len(x)
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
-Px = st.sidebar.selectbox('Index of max curvature point', np.arange(nx)) 
-Pc = st.sidebar.selectbox('Index of max Cc starting point', np.arange(nx)) 
-Pr = st.sidebar.selectbox('Index of max Cr starting point', np.arange(nx)) 
+Px = st.sidebar.selectbox('Index of max curvature point', np.arange(nx), 10) 
+Pc = st.sidebar.selectbox('Index of max Cc starting point', np.arange(nx), 50) 
+Pr = st.sidebar.selectbox('Index of max Cr starting point', np.arange(nx), 30) 
 st.sidebar.markdown('#### Seclect Index')
 Cc = st.sidebar.slider('Cc: Compression Index', 0.0, 0.5, 0.0)  
 Cr = st.sidebar.slider('Cr: Recompression Index', 0.0, 0.5, 0.0)  
@@ -27,6 +27,7 @@ Cs = st.sidebar.slider('Cs: Swelling Index', 0.0, 0.5, 0.0)
 fig = plt.figure(figsize = (5,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(x,y, '.-')
+plt.plot([10,10],[0.6,0.6], 'rx')
 plt.plot([0,100],[0.6,0.6], 'r--')
 #
 plt.xlabel('x')
