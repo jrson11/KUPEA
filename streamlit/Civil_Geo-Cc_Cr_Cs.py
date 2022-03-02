@@ -27,7 +27,7 @@ if password == st.secrets['db_password']:
   #
   st.dataframe(df)
   cols = df.columns
-  samp_list = pd.unique(df.cols[0])
+  samp_list = np.unique(df.cols[0])
   st.text(samp_list[0])
   #samp_ID = st.sidebar.selectbox('Select Sample ID', np.arange(nx), 102) 
 else:
