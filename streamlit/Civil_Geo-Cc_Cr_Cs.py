@@ -39,12 +39,12 @@ else:
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
-iiii = st.sidebar.selectbox('Index of iiiiii starting point', np.arange(nx), 102) 
-iiiii = st.sidebar.selectbox('Index of iiiiiii starting point', np.arange(nx), 70) 
+iiii = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 102) 
+iiiii = st.sidebar.selectbox('Index of Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
-iiiiiiiiiiiiiii = st.sidebar.slider('iiiiii (Compression Index) * 1e3', 0, 400, 235) 
-iiiiiiiiiiiiiiii = st.sidebar.slider('iiiiiii (Recompression Index) * 1e3', 0, 400, 22) 
-iiiiiiiiiiiiiiiii = st.sidebar.slider('iiiiiiii (Swelling Index) * 1e3', 0, 400, 55) 
+iiiiiiiiiiiiiii = st.sidebar.slider('Cc (Compression Index) * 1e3', 0, 400, 235) 
+iiiiiiiiiiiiiiii = st.sidebar.slider('Cr (Recompression Index) * 1e3', 0, 400, 22) 
+iiiiiiiiiiiiiiiii = st.sidebar.slider('Cs (Swelling Index) * 1e3', 0, 400, 55) 
 iiiiii = iiiiiiiiiiiiiii / 1000
 iiiiiii = iiiiiiiiiiiiiiii / 1000
 iiiiiiii = iiiiiiiiiiiiiiiii / 1000
