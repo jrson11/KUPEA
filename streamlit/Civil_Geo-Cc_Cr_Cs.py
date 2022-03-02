@@ -93,16 +93,16 @@ plt.scatter(np.log10(x[iiiii]),y[iiiii], c='m', marker='x')
 plt.plot([np.log10(x[iiii]),np.log10(xmin)],[y[iiii],iiiiiiiiiiii], 'r--', linewidth=1)
 plt.plot([np.log10(x[iiiii]),np.log10(xmax)],[y[iiiii],iiiiiiiiiiiii], 'm--', linewidth=1)
 plt.plot([np.log10(x[iiiii]),np.log10(xmax)],[y[iiiii],iiiiiiiiiiiiii], 'y--', linewidth=1)
-plt.text(np.log10(xmax)-0.5,y[iiii]+0.05,'iiiiii='+str(round(iiiiii,3)))
-plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiii+0.01,'iiiiiii='+str(round(iiiiiii,3)))
-plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiiii+0.01,'iiiiiiii='+str(round(iiiiiiii,3)))
+plt.text(np.log10(xmax)-0.5,y[iiii]+0.05,'Cc='+str(round(iiiiii,3)))
+plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiii+0.01,'Cr='+str(round(iiiiiii,3)))
+plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiiii+0.01,'Cs='+str(round(iiiiiiii,3)))
 ## Casagrande
 plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],y[iiiiiiiiiiiiiiiiiiiii]], 'k-', linewidth=0.5)
 plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiiiiiiiiiii], C='k', linewidth=0.5)
 plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiiiiiiiiiiii], C='grey', linestyle='--', linewidth=0.5)
-## iiii
+## Pc
 plt.plot([np.log10(Pc_kPa),np.log10(Pc_kPa)],[ymin-0.03,y[iiiiiiiiiiiiiiiiiiiii]], 'k-', linewidth=1)
-plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'iiii='+str(round(Pc_kPa,1)))
+plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'Pc='+str(round(Pc_kPa,1)))
 ##
 plt.xlabel('log(x)')
 plt.ylabel('y')
