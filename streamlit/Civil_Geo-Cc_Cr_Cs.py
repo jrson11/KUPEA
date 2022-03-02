@@ -24,14 +24,13 @@ if password == st.secrets['db_password']:
   #
   csv = st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
   df = pd.read_csv(csv)
-  #
   cols = df.columns
-  st.dataframe(df[cols[0]])
-
   samp_list = np.unique(df[cols[0]])
-  st.text(samp_list)
-  samp_ID = st.sidebar.selectbox('Select Sample ID', samp_list) 
-  
+  #
+  samp_ID = st.sidebar.selectbox('Select Sample ID', samp_list)
+  ii = samp_ID == df[cols[0]]
+  x = np.array(df.loc[ii,cols[1])
+  y = np.array(df.loc[ii,cols[2])
 else:
   st.markdown('## Please join KUPEA')
   st.markdown('#### Only members can upload his own data to analyze engineering parameters')
