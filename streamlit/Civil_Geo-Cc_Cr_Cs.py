@@ -29,7 +29,7 @@ if password == st.secrets['db_password']:
   #
   samp_ID = st.sidebar.selectbox('Select Sample ID', samp_list)
   ii = samp_ID == df[cols[0]]
-  x = df.loc[ii,cols[1])
+  x = df.loc[ii,cols[1]]
   st.dataframe(x)
   #y = np.array(df.loc[ii,cols[2])
 else:
