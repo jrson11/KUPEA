@@ -22,8 +22,10 @@ if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
   st.markdown('#### You can upload your CSV file with 3 columns [Name, X, Y]')
   #
-  st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
-  
+  csv = st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
+  #
+  st.text(csv)
+  #samp_ID = st.sidebar.selectbox('Select Sample ID', np.arange(nx), 102) 
 else:
   st.markdown('## Please join KUPEA')
   st.markdown('#### Only members can upload his own data to analyze engineering parameters')
