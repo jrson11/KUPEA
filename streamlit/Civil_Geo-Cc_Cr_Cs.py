@@ -52,7 +52,7 @@ st.sidebar.markdown('#### Casagrande Method')
 iiiiiiiiiiiiiiiiiiiii = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 20) 
 iiiiiiiiiiiiiiiiii = st.sidebar.slider('Slope of tangential line at Max Curvature * -1e3', 0, 400, 75)
 iiiiiiiiii = iiiiiiiiiiiiiiiiii / 1000
-log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (iiii)', 0.0, 2.0, 0.5) 
+log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (Pc)', 0.0, 2.0, 0.5) 
 Pc_kPa = 10**(log_Pc)
 Pc_MPa = Pc_kPa / 1000
 
