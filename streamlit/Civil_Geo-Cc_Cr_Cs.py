@@ -111,8 +111,3 @@ plt.grid(linestyle='-', alpha=0.5)
 plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
 ##
 st.pyplot(fig)
-
-
-
-
-  
