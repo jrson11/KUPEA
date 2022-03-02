@@ -56,7 +56,6 @@ log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (Pc)', 0.0, 
 Pc_kPa = 10**(log_Pc)
 Pc_MPa = Pc_kPa / 1000
 
-## Function to plot lines
 def find_y2(x1,y1,C,x2):
   # y1 = a x1 + b
   # b = y1 - a x1
@@ -73,7 +72,6 @@ iiiiiiiiiiii = find_y2(np.log10(x[iiii]),y[iiii],iiiiii,np.log10(xmin))
 iiiiiiiiiiiii = find_y2(np.log10(x[iiiii]),y[iiiii],iiiiiii,np.log10(xmax))
 iiiiiiiiiiiiii = find_y2(np.log10(x[iiiii]),y[iiiii],iiiiiiii,np.log10(xmax))
 
-## Casagrande method
 #tan_slope = (y[iiiiiiiiiiiiiiiiiiiii]-y[iiiiiiiiiiiiiiiiiiiii+2])/(np.log10(x[iiiiiiiiiiiiiiiiiiiii])-np.log10(x[iiiiiiiiiiiiiiiiiiiii+2]))
 #iiiiiiiiii = tan_slope*-1
 iiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiii,np.log10(xmax))
@@ -85,30 +83,24 @@ iiiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiii
 fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log10(x),y, '.-', linewidth=1)
-## Points
 plt.scatter(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii], c='k', marker='x')
 plt.scatter(np.log10(x[iiii]),y[iiii], c='r', marker='x')
 plt.scatter(np.log10(x[iiiii]),y[iiiii], c='m', marker='x')
-## Lines
 plt.plot([np.log10(x[iiii]),np.log10(xmin)],[y[iiii],iiiiiiiiiiii], 'r--', linewidth=1)
 plt.plot([np.log10(x[iiiii]),np.log10(xmax)],[y[iiiii],iiiiiiiiiiiii], 'm--', linewidth=1)
 plt.plot([np.log10(x[iiiii]),np.log10(xmax)],[y[iiiii],iiiiiiiiiiiiii], 'y--', linewidth=1)
 plt.text(np.log10(xmax)-0.5,y[iiii]+0.05,'Cc='+str(round(iiiiii,3)))
 plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiii+0.01,'Cr='+str(round(iiiiiii,3)))
 plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiiii+0.01,'Cs='+str(round(iiiiiiii,3)))
-## Casagrande
 plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],y[iiiiiiiiiiiiiiiiiiiii]], 'k-', linewidth=0.5)
 plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiiiiiiiiiii], C='k', linewidth=0.5)
 plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiiiiiiiiiiii], C='grey', linestyle='--', linewidth=0.5)
-## Pc
 plt.plot([np.log10(Pc_kPa),np.log10(Pc_kPa)],[ymin-0.03,y[iiiiiiiiiiiiiiiiiiiii]], 'k-', linewidth=1)
 plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'Pc='+str(round(Pc_kPa,1)))
-##
 plt.xlabel('log(x)')
 plt.ylabel('y')
 plt.xlim([np.log10(xmin)-0.3,np.log10(xmax)+0.3])
 plt.ylim([ymin-0.03,ymax+0.03])
-#plt.xscale('log')
 plt.grid(linestyle='-', alpha=0.5)
 plt.grid(which='minor', color='grey', linestyle='-', alpha=0.2)
 ##
