@@ -26,7 +26,7 @@ if password == st.secrets['db_password']:
   df = pd.read_csv(csv)
   #
   cols = df.columns
-  st.dataframe(df.cols[0])
+  st.dataframe(df[cols[0]])
 
   #samp_list = np.unique(df.cols[0])
   #st.text(samp_list)
