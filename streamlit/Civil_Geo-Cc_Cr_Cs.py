@@ -25,10 +25,11 @@ if password == st.secrets['db_password']:
   csv = st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=False)
   df = pd.read_csv(csv)
   #
-  st.dataframe(df)
   cols = df.columns
-  samp_list = np.unique(df.cols[0])
-  st.text(samp_list)
+  st.dataframe(df.cols[0])
+
+  #samp_list = np.unique(df.cols[0])
+  #st.text(samp_list)
   #samp_ID = st.sidebar.selectbox('Select Sample ID', np.arange(nx), 102) 
 else:
   st.markdown('## Please join KUPEA')
