@@ -30,7 +30,7 @@ if password == st.secrets['db_password']:
 
   samp_list = np.unique(df[cols[0]])
   st.text(samp_list)
-  samp_ID = st.sidebar.selectbox('Select Sample ID', samp_list, samp_list[0]) 
+  samp_ID = st.sidebar.selectbox('Select Sample ID', samp_list]) 
   
 else:
   st.markdown('## Please join KUPEA')
