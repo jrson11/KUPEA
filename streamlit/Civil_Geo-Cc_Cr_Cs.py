@@ -30,8 +30,7 @@ if password == st.secrets['db_password']:
   samp_ID = st.sidebar.selectbox('Select Sample ID', samp_list)
   ii = samp_ID == df[cols[0]]
   x = np.array(df.loc[ii,cols[1]])
-  st.dataframe(x)
-  #y = np.array(df.loc[ii,cols[2])
+  y = np.array(df.loc[ii,cols[2]])
 else:
   st.markdown('## Please join KUPEA')
   st.markdown('#### Only members can upload his own data to analyze engineering parameters')
