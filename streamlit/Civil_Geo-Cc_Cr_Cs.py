@@ -28,7 +28,7 @@ if password == st.secrets['db_password']:
   st.dataframe(df)
   cols = df.columns
   samp_list = pd.unique(df.cols[0])
-  st.dataframe(samp_list)
+  st.text(samp_list[0])
   #samp_ID = st.sidebar.selectbox('Select Sample ID', np.arange(nx), 102) 
 else:
   st.markdown('## Please join KUPEA')
