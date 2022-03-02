@@ -39,20 +39,20 @@ else:
 
 # Main -----------------------------------------------
 st.sidebar.markdown('#### Seclect Points')
-Pc = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 102) 
-Pr = st.sidebar.selectbox('Index of Cr starting point', np.arange(nx), 70) 
+iiii = st.sidebar.selectbox('Index of iiiiii starting point', np.arange(nx), 102) 
+iiiii = st.sidebar.selectbox('Index of iiiiiii starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
-Cc1000 = st.sidebar.slider('Cc (Compression Index) * 1e3', 0, 400, 235) 
-Cr1000 = st.sidebar.slider('Cr (Recompression Index) * 1e3', 0, 400, 22) 
-Cs1000 = st.sidebar.slider('Cs (Swelling Index) * 1e3', 0, 400, 55) 
-Cc = Cc1000 / 1000
-Cr = Cr1000 / 1000
-Cs = Cs1000 / 1000
+iiiiiiiiiiiiiii = st.sidebar.slider('iiiiii (Compression Index) * 1e3', 0, 400, 235) 
+iiiiiiiiiiiiiiii = st.sidebar.slider('iiiiiii (Recompression Index) * 1e3', 0, 400, 22) 
+iiiiiiiiiiiiiiiii = st.sidebar.slider('iiiiiiii (Swelling Index) * 1e3', 0, 400, 55) 
+iiiiii = iiiiiiiiiiiiiii / 1000
+iiiiiii = iiiiiiiiiiiiiiii / 1000
+iiiiiiii = iiiiiiiiiiiiiiiii / 1000
 st.sidebar.markdown('#### Casagrande Method')
-Px = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 20) 
-Ca1000 = st.sidebar.slider('Slope of tangential line at Max Curvature * -1e3', 0, 400, 75)
-Ca1 = Ca1000 / 1000
-log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (Pc)', 0.0, 2.0, 0.5) 
+iiiiiiiiiiiiiiiiiiiii = st.sidebar.selectbox('Index of Max Curvature point', np.arange(nx), 20) 
+iiiiiiiiiiiiiiiiii = st.sidebar.slider('Slope of tangential line at Max Curvature * -1e3', 0, 400, 75)
+iiiiiiiiii = iiiiiiiiiiiiiiiiii / 1000
+log_Pc = st.sidebar.slider('log value of Pre-consolidation Pressure (iiii)', 0.0, 2.0, 0.5) 
 Pc_kPa = 10**(log_Pc)
 Pc_MPa = Pc_kPa / 1000
 
@@ -69,16 +69,16 @@ xmin = min(x)
 xmax = max(x)
 ymin = min(y)
 ymax = max(y)
-Cc_y2 = find_y2(np.log10(x[Pc]),y[Pc],Cc,np.log10(xmin))
-Cr_y2 = find_y2(np.log10(x[Pr]),y[Pr],Cr,np.log10(xmax))
-Cs_y2 = find_y2(np.log10(x[Pr]),y[Pr],Cs,np.log10(xmax))
+iiiiiiiiiiii = find_y2(np.log10(x[iiii]),y[iiii],iiiiii,np.log10(xmin))
+iiiiiiiiiiiii = find_y2(np.log10(x[iiiii]),y[iiiii],iiiiiii,np.log10(xmax))
+iiiiiiiiiiiiii = find_y2(np.log10(x[iiiii]),y[iiiii],iiiiiiii,np.log10(xmax))
 
 ## Casagrande method
-#tan_slope = (y[Px]-y[Px+2])/(np.log10(x[Px])-np.log10(x[Px+2]))
-#Ca1 = tan_slope*-1
-Ca1_y2 = find_y2(np.log10(x[Px]),y[Px],Ca1,np.log10(xmax))
-Ca2 = Ca1 / 2
-Ca2_y2 = find_y2(np.log10(x[Px]),y[Px],Ca2,np.log10(xmax))
+#tan_slope = (y[iiiiiiiiiiiiiiiiiiiii]-y[iiiiiiiiiiiiiiiiiiiii+2])/(np.log10(x[iiiiiiiiiiiiiiiiiiiii])-np.log10(x[iiiiiiiiiiiiiiiiiiiii+2]))
+#iiiiiiiiii = tan_slope*-1
+iiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiii,np.log10(xmax))
+iiiiiiiiiii = iiiiiiiiii / 2
+iiiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiii,np.log10(xmax))
 
 
 # Plot -----------------------------------------------
@@ -86,23 +86,23 @@ fig = plt.figure(figsize = (4,5), dpi=100)
 plt.rcParams['font.size'] = '8'
 plt.plot(np.log10(x),y, '.-', linewidth=1)
 ## Points
-plt.scatter(np.log10(x[Px]),y[Px], c='k', marker='x')
-plt.scatter(np.log10(x[Pc]),y[Pc], c='r', marker='x')
-plt.scatter(np.log10(x[Pr]),y[Pr], c='m', marker='x')
+plt.scatter(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii], c='k', marker='x')
+plt.scatter(np.log10(x[iiii]),y[iiii], c='r', marker='x')
+plt.scatter(np.log10(x[iiiii]),y[iiiii], c='m', marker='x')
 ## Lines
-plt.plot([np.log10(x[Pc]),np.log10(xmin)],[y[Pc],Cc_y2], 'r--', linewidth=1)
-plt.plot([np.log10(x[Pr]),np.log10(xmax)],[y[Pr],Cr_y2], 'm--', linewidth=1)
-plt.plot([np.log10(x[Pr]),np.log10(xmax)],[y[Pr],Cs_y2], 'y--', linewidth=1)
-plt.text(np.log10(xmax)-0.5,y[Pc]+0.05,'Cc='+str(round(Cc,3)))
-plt.text(np.log10(xmax)-0.5,Cr_y2+0.01,'Cr='+str(round(Cr,3)))
-plt.text(np.log10(xmax)-0.5,Cs_y2+0.01,'Cs='+str(round(Cs,3)))
+plt.plot([np.log10(x[iiii]),np.log10(xmin)],[y[iiii],iiiiiiiiiiii], 'r--', linewidth=1)
+plt.plot([np.log10(x[iiiii]),np.log10(xmax)],[y[iiiii],iiiiiiiiiiiii], 'm--', linewidth=1)
+plt.plot([np.log10(x[iiiii]),np.log10(xmax)],[y[iiiii],iiiiiiiiiiiiii], 'y--', linewidth=1)
+plt.text(np.log10(xmax)-0.5,y[iiii]+0.05,'iiiiii='+str(round(iiiiii,3)))
+plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiii+0.01,'iiiiiii='+str(round(iiiiiii,3)))
+plt.text(np.log10(xmax)-0.5,iiiiiiiiiiiiii+0.01,'iiiiiiii='+str(round(iiiiiiii,3)))
 ## Casagrande
-plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],y[Px]], 'k-', linewidth=0.5)
-plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca1_y2], C='k', linewidth=0.5)
-plt.plot([np.log10(x[Px]),np.log10(xmax)],[y[Px],Ca2_y2], C='grey', linestyle='--', linewidth=0.5)
-## Pc
-plt.plot([np.log10(Pc_kPa),np.log10(Pc_kPa)],[ymin-0.03,y[Px]], 'k-', linewidth=1)
-plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'Pc='+str(round(Pc_kPa,1)))
+plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],y[iiiiiiiiiiiiiiiiiiiii]], 'k-', linewidth=0.5)
+plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiiiiiiiiiii], C='k', linewidth=0.5)
+plt.plot([np.log10(x[iiiiiiiiiiiiiiiiiiiii]),np.log10(xmax)],[y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiiiiiiiiiiii], C='grey', linestyle='--', linewidth=0.5)
+## iiii
+plt.plot([np.log10(Pc_kPa),np.log10(Pc_kPa)],[ymin-0.03,y[iiiiiiiiiiiiiiiiiiiii]], 'k-', linewidth=1)
+plt.text(np.log10(Pc_kPa)+0.1,ymin-0.02,'iiii='+str(round(Pc_kPa,1)))
 ##
 plt.xlabel('log(x)')
 plt.ylabel('y')
