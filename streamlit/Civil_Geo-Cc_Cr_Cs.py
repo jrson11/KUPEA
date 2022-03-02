@@ -71,9 +71,6 @@ ymax = max(y)
 iiiiiiiiiiii = find_y2(np.log10(x[iiii]),y[iiii],iiiiii,np.log10(xmin))
 iiiiiiiiiiiii = find_y2(np.log10(x[iiiii]),y[iiiii],iiiiiii,np.log10(xmax))
 iiiiiiiiiiiiii = find_y2(np.log10(x[iiiii]),y[iiiii],iiiiiiii,np.log10(xmax))
-
-#tan_slope = (y[iiiiiiiiiiiiiiiiiiiii]-y[iiiiiiiiiiiiiiiiiiiii+2])/(np.log10(x[iiiiiiiiiiiiiiiiiiiii])-np.log10(x[iiiiiiiiiiiiiiiiiiiii+2]))
-#iiiiiiiiii = tan_slope*-1
 iiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiii,np.log10(xmax))
 iiiiiiiiiii = iiiiiiiiii / 2
 iiiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii],iiiiiiiiiii,np.log10(xmax))
