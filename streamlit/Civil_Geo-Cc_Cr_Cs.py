@@ -57,9 +57,6 @@ Pc_kPa = 10**(log_Pc)
 Pc_MPa = Pc_kPa / 1000
 
 def find_y2(x1,y1,C,x2):
-  # y1 = a x1 + b
-  # b = y1 - a x1
-  # y2 = a x2 + b = a x2 -a x1 + y1
   a = C*-1
   y2 = a*x2 - a*x1 + y1
   return y2
