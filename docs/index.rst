@@ -13,7 +13,7 @@ Korea-US Professional Engineer Association
    Vision & Mission <./objective>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Technical Groups
    
    Civil <./PE_Civil>
@@ -28,5 +28,10 @@ Korea-US Professional Engineer Association
    :caption: Activity
    
    Plan for 2022 <./Plan_2022>
-
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: Web Applications
+   
+   Civil <./App_Civil>
 
