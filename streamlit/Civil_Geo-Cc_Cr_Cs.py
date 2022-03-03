@@ -76,7 +76,7 @@ iiiiiiiiiiiiiiiiiiii = find_y2(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiii
 # Plot -----------------------------------------------
 fig = plt.figure(figsize = (4,5), dpi=300)
 plt.rcParams['font.size'] = '8'
-plt.plot(np.log10(x),y, '.-', linewidth=1)
+plt.plot(np.log10(x),y, '-', linewidth=1)
 plt.scatter(np.log10(x[iiiiiiiiiiiiiiiiiiiii]),y[iiiiiiiiiiiiiiiiiiiii], c='k', marker='x')
 plt.scatter(np.log10(x[iiii]),y[iiii], c='r', marker='x')
 plt.scatter(np.log10(x[iiiii]),y[iiiii], c='m', marker='x')
