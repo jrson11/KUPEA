@@ -5,9 +5,9 @@ Plan for 2022
 Technical Sessions
 ------------------
 
-- Jan.
-- Feb.
-- Mar.
+- Jan.: How to transfer energy?(글공)
+- Feb.: How to control the FAB environment?(Alex) / 3상 전력을 쓰는 수학적 이유(글공)
+- Mar.: How it's make: Industrial gases(JJams) / 파이썬을 활용한 엑셀 사무자동화 v1(글로벌토목인)
 - Apr.
 - May.
 - Jun.
