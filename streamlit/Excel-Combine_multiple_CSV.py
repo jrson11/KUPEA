@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-
+'''
 # Sidebar
 st.markdown('## To combine multiple Excel files into one')
 
@@ -54,3 +54,4 @@ st.sidebar.download_button(
      mime='text/csv',
  )
 
+'''
