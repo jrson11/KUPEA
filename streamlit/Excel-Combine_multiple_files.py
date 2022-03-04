@@ -40,6 +40,8 @@ for input_file in input_files:
     elif datatype == 'csv':
         df = pd.read_csv(input_file, skiprows=n_header)
 
+    st.dataframe(df)
+     
     df.insert(0,'File',input_file.name)
     df_XLSX = pd.concat([df_XLSX,df.loc[1:,:]])    
     
