@@ -30,6 +30,9 @@ sheet = st.sidebar.text_input('Name of target sheet','Sheet1')
 n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],0)
 
 df_XLSX = pd.DataFrame()
+#
+for input_file in input_list:
+    st.text(input_file.name)
 
 
 '''
