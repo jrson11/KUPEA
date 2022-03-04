@@ -17,7 +17,7 @@ elif datatype == 'csv':
   
 n_input = len(input_list)
 st.markdown('#### Input files')
-st.text('Number of uploaded files: '+str(n_input))
+st.sidebar.text('Number of uploaded files: '+str(n_input))
 
 
 # Importing ----------------------------------------
