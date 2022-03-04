@@ -26,7 +26,8 @@ st.sidebar.text('Number of uploaded files: '+str(n_input))
 n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],0)
 
 input_file = input_list[0].name
-st.text(input_file)
+df_xlsx = pd.read_excel(input_file, header=n_header)
+st.dataframe(df_xlsx)
 
 '''
 
