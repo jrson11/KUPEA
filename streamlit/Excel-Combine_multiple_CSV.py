@@ -14,7 +14,7 @@ password = st.sidebar.text_input('Password to Continue', 'password')
 # Membership --------------------------------------------
 if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
-  st.markdown('#### You can upload your CSV file with 3 columns [Sample_ID, X, Y]')
+  st.markdown('#### You can upload your multiple CSV files, which have values in same format')
   #
   csv_list = st.file_uploader('Choose input file',type=['csv'], accept_multiple_files=True)
   n_input = len(csv_list)
