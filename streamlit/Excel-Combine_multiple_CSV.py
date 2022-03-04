@@ -30,11 +30,14 @@ sheet = st.sidebar.text_input('Name of target sheet','Sheet1')
 n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],0)
 
 df_XLSX = pd.DataFrame()
+
+
+'''
 for input_file in input_list:
     st.text(input_file.name)
     if t_data == 'xlsx':
         df_xlsx = pd.read_excel(input_file, sheet_name=sheet, header=n_header)
-        st.dataframe(df_xlsx)
+        
     elif t_data == 'xls':
         df_xlsx = pd.read_excel(input_file, sheet_name=sheet, header=n_header)
     elif t_data == 'csv':
@@ -69,3 +72,4 @@ else:
   st.markdown('## Please join KUPEA')
   st.markdown('#### Only members can download his result of combined multiple CSV files')
 
+'''
