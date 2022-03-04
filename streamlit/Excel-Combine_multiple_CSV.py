@@ -1,3 +1,7 @@
+# Purspose: To combine multiple CSV files, which have the same format
+# Name: Excel-Combine_multiple_CSV.py
+# Author: glocivilngneer at gmail dot com
+# All right reserved
 import pandas as pd
 import streamlit as st
 
