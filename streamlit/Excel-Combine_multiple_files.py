@@ -33,14 +33,18 @@ n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,
 df_XLSX = pd.DataFrame()
 st.dataframe(df_XLSX)
 for input_file in input_files:
+    
+    df = pd.read_excel(input_file, skiprows=n_header)
+    
+    '''
     if datatype == 'xlsx' or 'xls':
         df = pd.read_excel(input_file, skiprows=n_header)
     elif datatype == 'csv':
         df = pd.read_csv(input_file, skiprows=n_header)
 
     st.dataframe(df)
+    '''
     
-'''     
     df.insert(0,'File',input_file.name)
     df_XLSX = pd.concat([df_XLSX,df.loc[1:,:]])    
     
@@ -71,4 +75,4 @@ if password == st.secrets['db_password']:
 else:
   st.markdown('## Please join KUPEA')
   st.markdown('#### Only members can download result table')
-'''
+
