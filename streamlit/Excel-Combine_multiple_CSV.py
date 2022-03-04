@@ -7,7 +7,9 @@ password = st.sidebar.text_input('Password to Continue', 'password')
 #
 st.sidebar.markdown('## Input')
 datatype = st.sidebar.selectbox('Type of input data file',['xlsx','xls','csv'])
-#
+
+
+# Importing ----------------------------------------
 if datatype == 'xlsx':
     input_list = st.file_uploader('Choose input files',type=['xlsx'], accept_multiple_files=True)
 elif datatype == 'xls':
@@ -18,10 +20,6 @@ elif datatype == 'csv':
 n_input = len(input_list)
 st.markdown('#### Input files')
 st.sidebar.text('Number of uploaded files: '+str(n_input))
-
-
-# Importing ----------------------------------------
-
 
 
 # Process ----------------------------------------
