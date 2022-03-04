@@ -33,6 +33,6 @@ Korea-US Professional Engineer Association
    :maxdepth: 1
    :caption: Web Applications
    
-   General <./App_General>
+   Excel <./App_Excel>
    Civil <./App_Civil>
 
