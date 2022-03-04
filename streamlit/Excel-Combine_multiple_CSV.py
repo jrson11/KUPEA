@@ -23,25 +23,11 @@ st.sidebar.text('Number of uploaded files: '+str(n_input))
 
 
 # Process ----------------------------------------
+n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],0)
 
 
 '''
-# Sidebar
-st.markdown('## To combine multiple Excel files into one')
 
-st.sidebar.markdown('## Input')
-t_data = st.sidebar.selectbox('Type of input data file',['xlsx','xls','csv'])
-
-if t_data == 'xlsx':
-    input_list = st.sidebar.file_uploader('Choose input files',type=['xlsx'], accept_multiple_files=True)
-elif t_data == 'xls':
-    input_list = st.sidebar.file_uploader('Choose input files',type=['xls'], accept_multiple_files=True)
-elif t_data == 'csv':
-    input_list = st.sidebar.file_uploader('Choose input files',type=['csv'], accept_multiple_files=True)
-  
-n_input = len(input_list)
-st.markdown('#### Input files')
-st.text('Number of uploaded files: '+str(n_input))
 
 
 # Processing
