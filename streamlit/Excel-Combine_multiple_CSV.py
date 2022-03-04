@@ -35,6 +35,8 @@ for input_file in input_list:
     st.text(input_file.name)
     if t_data == 'xlsx':
         st.text('xlsx')
+        df_xlsx = pd.read_excel(input_file.name)
+        st.dataframe(df_xlsx)
     elif t_data == 'xls':
         st.text('xls')
     elif t_data == 'csv':
