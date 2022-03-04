@@ -33,8 +33,12 @@ df_XLSX = pd.DataFrame()
 #
 for input_file in input_list:
     st.text(input_file.name)
-    
-    
+    if t_data == 'xlsx':
+        st.text('xlsx')
+    elif t_data == 'xls':
+        st.text('xls')
+    elif t_data == 'csv':
+        st.text('csv')
 '''
     if t_data == 'xlsx':
         df_xlsx = pd.read_excel(input_file.name, sheet_name=sheet, header=n_header)
