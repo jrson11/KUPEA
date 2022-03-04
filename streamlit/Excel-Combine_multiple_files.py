@@ -39,7 +39,8 @@ for input_file in input_files:
         df = pd.read_csv(input_file, skiprows=n_header)
 
     st.dataframe(df)
-     
+    
+'''     
     df.insert(0,'File',input_file.name)
     df_XLSX = pd.concat([df_XLSX,df.loc[1:,:]])    
     
@@ -70,3 +71,4 @@ if password == st.secrets['db_password']:
 else:
   st.markdown('## Please join KUPEA')
   st.markdown('#### Only members can download result table')
+'''
