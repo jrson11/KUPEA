@@ -10,6 +10,8 @@ import streamlit as st
 # Initialization ----------------------------------------
 st.markdown('## Combine multiple CSV files')
 password = st.sidebar.text_input('Password to Continue', 'password')
+st.sidebar.markdown('## Input')
+t_data = st.sidebar.selectbox('Type of input data file',['xlsx','xls','csv'])
 
 # Membership --------------------------------------------
 if password == st.secrets['db_password']:
