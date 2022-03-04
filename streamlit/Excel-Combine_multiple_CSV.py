@@ -25,7 +25,7 @@ n_input = len(input_list)
 st.sidebar.text('Number of uploaded files: '+str(n_input))
 
 # Processing --------------------------------------------
-n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10])
+n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],1)
 
 df_XLSX = pd.DataFrame()
 for input_file in input_list:
