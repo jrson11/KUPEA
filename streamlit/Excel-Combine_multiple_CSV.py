@@ -27,7 +27,7 @@ st.sidebar.text('Number of uploaded files: '+str(n_input))
 # Processing --------------------------------------------
 st.sidebar.markdown('## Processing')
 sheet = st.sidebar.text_input('Name of target sheet','Sheet1')
-n_header = st.sidebar.selectbox('Number of header lines to skip',[1,2,3,4,5,6,7,8,9,10],1)-1
+n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],0)
 
 df_XLSX = pd.DataFrame()
 for input_file in input_list:
