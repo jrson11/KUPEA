@@ -1,6 +1,18 @@
 import pandas as pd
 import streamlit as st
 
+# Initialization ----------------------------------------
+st.markdown('## To Combine Multiple Excel files')
+password = st.sidebar.text_input('Password to Continue', 'password')
+
+
+
+
+
+
+
+
+
 '''
 # Sidebar
 st.markdown('## To combine multiple Excel files into one')
