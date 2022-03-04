@@ -55,7 +55,7 @@ csv_result = convert_df(df_XLSX)
 
 if password == st.secrets['db_password']:
   st.markdown('## Welcome to KUPEA')
-  st.markdown('#### You can download your results, which have values in same format')
+  st.markdown('#### You can download your results. Please click the button on the left sidebar')
   #
   st.sidebar.download_button(
      label="Download result table",
@@ -66,5 +66,5 @@ if password == st.secrets['db_password']:
 
 else:
   st.markdown('## Please join KUPEA')
-  st.markdown('#### Only members can upload his own data to combine multiple CSV files')
+  st.markdown('#### Only members can download his result of combined multiple CSV files')
 
