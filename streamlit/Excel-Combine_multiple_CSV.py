@@ -6,13 +6,13 @@ st.markdown('## To Combine Multiple Excel files')
 password = st.sidebar.text_input('Password to Continue', 'password')
 #
 st.sidebar.markdown('## Input')
-t_data = st.sidebar.selectbox('Type of input data file',['xlsx','xls','csv'])
+datatype = st.sidebar.selectbox('Type of input data file',['xlsx','xls','csv'])
 #
-if t_data == 'xlsx':
+if datatype == 'xlsx':
     input_list = st.file_uploader('Choose input files',type=['xlsx'], accept_multiple_files=True)
-elif t_data == 'xls':
+elif datatype == 'xls':
     input_list = st.file_uploader('Choose input files',type=['xls'], accept_multiple_files=True)
-elif t_data == 'csv':
+elif datatype == 'csv':
     input_list = st.file_uploader('Choose input files',type=['csv'], accept_multiple_files=True)
   
 n_input = len(input_list)
