@@ -42,7 +42,7 @@ st.sidebar.markdown('#### Seclect Points')
 iiii = st.sidebar.selectbox('Index of Cc starting point', np.arange(nx), 102) 
 iiiii = st.sidebar.selectbox('Index of Cr starting point', np.arange(nx), 70) 
 st.sidebar.markdown('#### Seclect Index')
-iiiiiiiiiiiiiii = st.sidebar.slider('Cc (Compression Index) * 1e3', 0, 400, 235) 
+iiiiiiiiiiiiiii = st.sidebar.slider('Cc (Compression Index) * 1e3', 0, 800, 235) 
 iiiiiiiiiiiiiiii = st.sidebar.slider('Cr (Recompression Index) * 1e3', 0, 400, 22) 
 iiiiiiiiiiiiiiiii = st.sidebar.slider('Cs (Swelling Index) * 1e3', 0, 400, 55) 
 iiiiii = iiiiiiiiiiiiiii / 1000
