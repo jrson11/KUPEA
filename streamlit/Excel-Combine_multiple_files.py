@@ -28,12 +28,12 @@ st.sidebar.text('Number of uploaded files: '+str(n_input))
 
 
 # Process ----------------------------------------
+i_sheet = st.sidebar.selectbox('Name of Sheet to import',[0,1,2,3,4,5,6,7,8,9,10],3)
 n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],3)
 
 df_XLSX = pd.DataFrame()
 #
 for input_file in input_files:
-    
     df = pd.read_excel(input_file, skiprows=n_header)
     st.dataframe(df)
     '''
