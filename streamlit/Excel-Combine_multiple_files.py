@@ -38,21 +38,20 @@ for input_file in input_files:
     #st.dataframe(df)
     
     if datatype == 'xlsx' or 'xls':
-        df = pd.read_excel(input_file, skiprows=n_header)
+        df = pd.read_excel(input_file, sheet_name=i_sheet, skiprows=n_header)
     elif datatype == 'csv':
         df = pd.read_csv(input_file, skiprows=n_header)
 
-    
     df.insert(0,'File',input_file.name)
     df_XLSX = pd.concat([df_XLSX,df.loc[1:,:]])    
     
 st.dataframe(df_XLSX)
 
+
 # Export ----------------------------------------
 def convert_df(df):
      # IMPORTANT: Cache the conversion to prevent computation on every rerun
      return df.to_csv(index=False).encode('utf-8')
-
 csv_result = convert_df(df_XLSX)
 
 
