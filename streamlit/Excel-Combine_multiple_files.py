@@ -5,7 +5,7 @@
 
 import pandas as pd
 import streamlit as st
-import io
+
 
 # Initialization ----------------------------------------
 st.markdown('## To Combine Multiple Excel files')
@@ -28,7 +28,7 @@ st.sidebar.text('Number of uploaded files: '+str(n_input))
 
 
 # Process ----------------------------------------
-i_sheet = st.sidebar.text_input('Movie title', 'Sheet1')
+i_sheet = st.sidebar.text_input('Name of sheet to import', 'Sheet1')
 n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,7,8,9,10],3)
 
 df_XLSX = pd.DataFrame()
