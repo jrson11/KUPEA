@@ -34,7 +34,7 @@ n_header = st.sidebar.selectbox('Number of header lines to skip',[0,1,2,3,4,5,6,
 df_XLSX = pd.DataFrame()
 #
 for input_file in input_files:
-    df = pd.read_excel(input_file, skiprows=n_header)
+    df = pd.read_excel(input_file, sheet_name=i_sheet, skiprows=n_header)
     st.dataframe(df)
     '''
     if datatype == 'xlsx' or 'xls':
