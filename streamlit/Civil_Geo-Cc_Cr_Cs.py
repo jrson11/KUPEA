@@ -9,7 +9,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Initialization ----------------------------------------
-st.markdown('## Cc, Cr, Cs Lines from log(x)-y plot')
+st.markdown('## Cc, Cr, Cs Lines from log(s)-e plot')
 password = st.sidebar.text_input('Password to Continue', 'password')
 
 ## Data
