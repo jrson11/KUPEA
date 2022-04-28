@@ -39,10 +39,11 @@ st.sidebar.markdown('#### Seclect Index')
 def get_data():
     return []
 unit_id = st.sidebar.text_input("Soil Unit ID")
+UW_gcc = st.sidebar.text_input("Soil Unit ID")
 base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
 #
 if st.sidebar.button("Add row"):
-    get_data().append({"UserID": user_id, "Unit id": unit_id, "base [m]": base_m})
+    get_data().append({"Unit ID": user_id, "UW [gcc]": UW_gcc, "base [m]": base_m})
 st.sidebar.write(pd.DataFrame(get_data()))
 
 
