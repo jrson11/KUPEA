@@ -45,9 +45,9 @@ Pa_kPa = 101.3
 # Plot ---------------------------------------------------
 zmax = np.nanmax(df.SCPT_DPTH)
 fig,ax = plt.subplots(1,3, figsize=(7,7))
-ax[0].plot(df_ex.SCPT_RES,df_ex.SCPT_DPTH,'.')
-ax[1].plot(df_ex.SCPT_FRES,df_ex.SCPT_DPTH,'.')
-ax[2].plot(df_ex.SCPT_PWP2,df_ex.SCPT_DPTH,'.')
+ax[0].plot(df.SCPT_RES,df.SCPT_DPTH,'.')
+ax[1].plot(df.SCPT_FRES,df.SCPT_DPTH,'.')
+ax[2].plot(df.SCPT_PWP2,df.SCPT_DPTH,'.')
 #
 ax[0].set_ylabel('Depth [m BSF]')
 ax[0].set_xlabel('qc [MPa]')        
