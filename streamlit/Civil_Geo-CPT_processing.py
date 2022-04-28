@@ -34,18 +34,16 @@ st.dataframe(df)
 
 # Sidebar -----------------------------------
 st.sidebar.markdown('#### Seclect Index')
+
 @st.cache(allow_output_mutation=True)
 def get_data():
     return []
-
-user_id = st.text_input("User ID")
-foo = st.slider("foo", 0, 100)
-bar = st.slider("bar", 0, 100)
-
-if st.button("Add row"):
-    get_data().append({"UserID": user_id, "foo": foo, "bar": bar})
-
-st.write(pd.DataFrame(get_data()))
+unit_id = st.sidebar.text_input("Soil Unit ID")
+base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
+#
+if st.sidebar.button("Add row"):
+    get_data().append({"UserID": user_id, "Unit id": unit_id, "base [m]": base_m})
+st.sidebar.write(pd.DataFrame(get_data()))
 
 
 
