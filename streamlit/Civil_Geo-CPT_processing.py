@@ -27,6 +27,8 @@ df_ex['SCPT_RES'] = SCPT_RES
 df_ex['SCPT_FRES'] = SCPT_FRES
 df_ex['SCPT_PWP2'] = SCPT_PWP2
 df_ex['SCPT_QT'] = SCPT_QT
+#
+st.dataframe(df_ex)
 
 # Plot
 zmax = np.nanmax(df_ex.SCPT_DPTH)
@@ -39,6 +41,7 @@ for k in range(3):
   ax[k].set(ylim=(zmax,0))
 #
 fig.tight_layout()
+#
 st.pyplot(fig)
 
 
