@@ -39,5 +39,6 @@ for k in range(3):
   ax[k].set(ylim=(zmax,0))
 #
 fig.tight_layout()
+st.pyplot(fig)
 
 
