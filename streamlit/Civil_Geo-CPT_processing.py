@@ -51,6 +51,7 @@ for k in range(3):
   ax[k].xaxis.set_label_position('top')
 #
 fig.tight_layout()
+fig.suptitle(loca, fontsize=12)
 #
 st.pyplot(fig)
 
