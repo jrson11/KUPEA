@@ -44,8 +44,6 @@ base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
 #
 if st.sidebar.button("Add row"):
     get_data().append({"Unit ID": user_id, "UW [gcc]": UW_gcc, "base [m]": base_m})
-if st.sidebar.button("Clear"):
-    df_unit = pd.DataFrame()
 st.sidebar.write(pd.DataFrame(get_data()))
 
 
