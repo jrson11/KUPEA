@@ -32,13 +32,23 @@ df.insert(0,'LOCA_ID',loca)
 st.dataframe(df)
 
 # Processing --------------------------------------------
+# 1. Isct
 Pa_kPa = 101.3
 qc_kPa = df.SCPT_RES*1000
 fs_kPa = df.SCPT_FRES*1000
 Rf = fs_kPa/qc_kPa*100
 Isbt = np.array([np.sqrt((3.47-np.log10(x))**2 + (np.log10(y)+1.22)**2) for x,y in zip(qc_kPa/Pa_kPa,Rf)])
-#df['Isbt'] = Isbt
+df['Isbt'] = Isbt
 #
+# 2. Ic before iteration
+#qt_kPa = df.SCPT_QT*1000
+#sv0_kPa = df['s,v0']
+#sv0e_kPa = df['s,v0e']
+#Qt1 = (qt_kPa-sv0_kPa)/sv0e_kPa
+#Fr = fs_kPa/(qc_kPa-sv0_kPa)*100
+#Ic1 = np.array([np.sqrt((3.47-np.log10(x))**2 + (np.log10(y)+1.22)**2) for x,y in zip(Qt1,Rf)])
+#df['Ic1'] = Ic1
+
 #st.dataframe(qc_kPa)
 
 
