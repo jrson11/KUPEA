@@ -37,6 +37,11 @@ ax[0].plot(df_ex.SCPT_RES,df_ex.SCPT_DPTH,'.')
 ax[1].plot(df_ex.SCPT_FRES,df_ex.SCPT_DPTH,'.')
 ax[2].plot(df_ex.SCPT_PWP2,df_ex.SCPT_DPTH,'.')
 #
+ax[0].set_ylabel('Depth [m BSF]')
+ax[0].set_xlabel('qc [MPa]')        
+ax[1].set_xlabel('fs [MPa]')        
+ax[2].set_xlabel('u2 [MPa]')        
+#
 for k in range(3):
   ax[k].set(ylim=(zmax,0))
   ax[k].grid(linestyle='dotted')
