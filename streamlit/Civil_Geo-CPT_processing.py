@@ -49,7 +49,11 @@ st.sidebar.write(pd.DataFrame(get_data()))
 n_unit = st.sidebar.slider('Number of Soil Units',1,10,5)
 unit_id = st.sidebar.text_input("Soil Unit ID")
 base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
-
+df_unit = pd.DataFrame()
+df_unit['Unit'] = unit_id
+df_unit['Base[m]'] = base_m
+#
+st.sidebar.dataframe(df_unit)
 
 # Processing --------------------------------------------
 # 1. Isct
