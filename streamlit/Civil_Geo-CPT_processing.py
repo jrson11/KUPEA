@@ -47,6 +47,8 @@ if st.sidebar.button("Add row"):
 st.sidebar.write(pd.DataFrame(get_data()))
 '''
 n_unit = st.sidebar.slider('Number of Soil Units',1,10,5)
+unit_id = st.sidebar.text_input("Soil Unit ID")
+base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
 
 
 # Processing --------------------------------------------
