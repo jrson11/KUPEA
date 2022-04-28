@@ -29,6 +29,7 @@ df['SCPT_PWP2'] = SCPT_PWP2
 df['SCPT_QT'] = SCPT_QT
 df.insert(0,'LOCA_ID',loca)
 #
+st.markdown('#### Importing Data')
 st.dataframe(df)
 
 # Sidebar -----------------------------------
@@ -77,6 +78,7 @@ for k in range(3):
 fig.tight_layout()
 fig.suptitle(loca, y=1.02, fontsize=12)
 #
+st.markdown('#### Plotting Data')
 st.pyplot(fig)
 
 
