@@ -34,7 +34,7 @@ st.dataframe(df)
 
 # Sidebar -----------------------------------
 st.sidebar.markdown('#### Seclect Index')
-
+'''
 @st.cache(allow_output_mutation=True)
 def get_data():
     return []
@@ -45,7 +45,8 @@ base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
 if st.sidebar.button("Add row"):
     get_data().append({"Unit ID": user_id, "UW [gcc]": UW_gcc, "base [m]": base_m})
 st.sidebar.write(pd.DataFrame(get_data()))
-
+'''
+n_unit = st.sidebar.slider('Number of Soil Units',1,10,5)
 
 
 # Processing --------------------------------------------
