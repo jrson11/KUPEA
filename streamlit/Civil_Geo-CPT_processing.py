@@ -31,6 +31,9 @@ df.insert(0,'LOCA_ID',loca)
 #
 st.dataframe(df)
 
+# Sidebar -----------------------------------
+st.sidebar.markdown('#### Seclect Index')
+
 # Processing --------------------------------------------
 # 1. Isct
 Pa_kPa = 101.3
