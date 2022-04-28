@@ -35,7 +35,7 @@ st.dataframe(df)
 Pa_kPa = 101.3
 qc_kPa = df.SCPT_RES*1000
 fs_kPa = df.SCPT_FRES*1000
-Rf = fs_kPa/qc_kPa*100
+#Rf = fs_kPa/qc_kPa*100
 #Isbt = np.array([np.sqrt((3.47-np.log10(x))**2 + (np.log10(y)+1.22)**2) for x,y in zip(qc_kPa/Patm,Rf)])
 #df['Isbt'] = Isbt
 #
