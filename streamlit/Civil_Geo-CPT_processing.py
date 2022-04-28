@@ -32,7 +32,7 @@ st.dataframe(df_ex)
 
 # Plot
 zmax = np.nanmax(df_ex.SCPT_DPTH)
-fig,ax = plt.subplots(1,3, figsize=(4,4))
+fig,ax = plt.subplots(1,3, figsize=(7,7))
 ax[0].plot(df_ex.SCPT_RES,df_ex.SCPT_DPTH,'.')
 ax[1].plot(df_ex.SCPT_FRES,df_ex.SCPT_DPTH,'.')
 ax[2].plot(df_ex.SCPT_PWP2,df_ex.SCPT_DPTH,'.')
