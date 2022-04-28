@@ -28,6 +28,16 @@ df_ex['SCPT_FRES'] = SCPT_FRES
 df_ex['SCPT_PWP2'] = SCPT_PWP2
 df_ex['SCPT_QT'] = SCPT_QT
 
-
+# Plot
+zmax = np.nanmax(df_ex.SCPT_DPTH)
+fig,ax = plt.subplots(1,3, figsize=(6,6))
+ax[0].plot(df_ex.SCPT_RES,df_ex.SCPT_DPTH,'.')
+ax[1].plot(df_ex.SCPT_FRES,df_ex.SCPT_DPTH,'.')
+ax[2].plot(df_ex.SCPT_PWP2,df_ex.SCPT_DPTH,'.')
+#
+for k in range(3):
+  ax[k].set(ylim=(zmax,0))
+#
+fig.tight_layout()
 
 
