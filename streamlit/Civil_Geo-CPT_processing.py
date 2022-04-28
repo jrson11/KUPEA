@@ -27,6 +27,7 @@ df_ex['SCPT_RES'] = SCPT_RES
 df_ex['SCPT_FRES'] = SCPT_FRES
 df_ex['SCPT_PWP2'] = SCPT_PWP2
 df_ex['SCPT_QT'] = SCPT_QT
+df_ex.insert(0,'LOCA_ID',loca)
 #
 st.dataframe(df_ex)
 
