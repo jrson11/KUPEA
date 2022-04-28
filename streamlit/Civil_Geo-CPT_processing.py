@@ -39,6 +39,10 @@ ax[2].plot(df_ex.SCPT_PWP2,df_ex.SCPT_DPTH,'.')
 #
 for k in range(3):
   ax[k].set(ylim=(zmax,0))
+  ax[k].grid(linestyle='dotted')
+  ax[k].minorticks_on()
+  ax[k].xaxis.set_ticks_position('top')
+  ax[k].xaxis.set_label_position('top')
 #
 fig.tight_layout()
 #
