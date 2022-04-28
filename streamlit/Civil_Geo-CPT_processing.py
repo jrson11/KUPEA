@@ -44,7 +44,7 @@ collect_numbers = lambda x : [int(i) for i in re.split("[^0-9]", x) if i != ""]
 df_unit = pd.DataFrame()
 
 numbers = st.text_input("PLease enter numbers")
-st.sidebar.write(collect_numbers(numbers))
+df_unit['depth'] = collect_numbers(numbers))
 
 
 
