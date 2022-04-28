@@ -39,7 +39,7 @@ st.sidebar.markdown('#### Seclect Index')
 def get_data():
     return []
 unit_id = st.sidebar.text_input("Soil Unit ID")
-UW_gcc = st.sidebar.text_input("Soil Unit ID")
+UW_gcc = st.sidebar.text_input("Soil Unit UW")
 base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
 #
 if st.sidebar.button("Add row"):
