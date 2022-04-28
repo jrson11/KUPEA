@@ -35,16 +35,7 @@ st.dataframe(df)
 # Sidebar -----------------------------------
 st.sidebar.markdown('#### Seclect Index')
 #
-n_unit = st.sidebar.slider('Number of Soil Units',1,10,5)
-unit_id = st.sidebar.text_input("Soil Unit ID")
-base_m = st.sidebar.text_input("Soil Unit Base Depth [m]")
-#
 
-collect_numbers = lambda x : [int(i) for i in re.split("[^0-9]", x) if i != ""]
-df_unit = pd.DataFrame()
-
-numbers = st.text_input("PLease enter numbers")
-df_unit['depth'] = collect_numbers(numbers)
 
 
 
