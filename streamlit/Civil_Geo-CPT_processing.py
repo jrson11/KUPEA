@@ -52,8 +52,8 @@ df['Isbt'] = Isbt
 #
 # 2. Ic before iteration
 qt_kPa = df.SCPT_QT*1000
-sv0_kPa = df.SCPT_CPO
-sv0e_kPa = df.SCPT_CPOD
+sv0_kPa = SCPT_CPO
+sv0e_kPa = SCPT_CPOD
 qn_kPa = qt_kPa - sv0_kPa
 '''
 #Preliminary calculation of Q_tn assuming n=1
