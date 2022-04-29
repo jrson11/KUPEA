@@ -51,19 +51,50 @@ Isbt = np.array([np.sqrt((3.47-np.log10(x))**2 + (np.log10(y)+1.22)**2) for x,y 
 df['Isbt'] = Isbt
 #
 # 2. Ic before iteration
-#qt_kPa = df.SCPT_QT*1000
-#sv0_kPa = df['s,v0']
-#sv0e_kPa = df['s,v0e']
-#Qt1 = (qt_kPa-sv0_kPa)/sv0e_kPa
-#Fr = fs_kPa/(qc_kPa-sv0_kPa)*100
-#Ic1 = np.array([np.sqrt((3.47-np.log10(x))**2 + (np.log10(y)+1.22)**2) for x,y in zip(Qt1,Rf)])
-#df['Ic1'] = Ic1
+qt_kPa = df.SCPT_QT*1000
+'''
+#Preliminary calculation of Q_tn assuming n=1
+df.loc[:, 'n'] = 1.0 # Initial value set to n=1.0 as per Robertson (2009) Eq 7
+df.loc[:, 'Q_tn'] = (df.SCPT_QNET*1000./p_atm)*(p_atm/SCPT.SCPT_CPOD)**SCPT.n # Robertson (2009) Eq. 5
+df.loc[:, 'F_r'] = 100*SCPT.SCPT_FRES/SCPT.SCPT_QNET # Robertson (2009) Eq. 2
+df.loc[:, 'Ic'] = np.sqrt((3.47-np.log10(SCPT.Q_tn))**2 + (1.22 + np.log10(SCPT.F_r))**2) # Robertson (2009) Eq. 6
+
+# Initialize temporary dataframe to keep track of n and Ic values through the iteration process
+temp_n = pd.DataFrame()
+temp_Ic = pd.DataFrame()
+temp_n.loc[:, 0] = SCPT.loc[:, 'n']
+temp_Ic.loc[:, 0] = SCPT.loc[:, 'Ic']
+
+# Iteratively calculate n, Ic and Q_tn until Δn <= 0.01 as per flowchart in Figure 46 in Robertson (2016)
+for i in range(1,51):    
+    SCPT.loc[:, 'Ic']  = np.sqrt((3.47-np.log10(SCPT.Q_tn))**2 + (1.22 + np.log10(SCPT.F_r))**2) # Robertson (2009) Eq. 5
+    SCPT.loc[:, 'n']   = np.minimum(1.0, 0.381*SCPT.Ic + 0.05*SCPT.SCPT_CPOD/p_atm - 0.15) # Robertson (2009) Eq 7
+    SCPT.loc[:,'Q_tn'] = (SCPT.SCPT_QNET*1000./p_atm)*(p_atm/SCPT.SCPT_CPOD)**SCPT.n  # Robertson (2009) Eq. 6
+    
+    # Store 'n' and 'Ic' values for current iteration
+    temp_n.loc[:, i] = SCPT.loc[:, 'n']
+    temp_Ic.loc[:, i] = SCPT.loc[:, 'Ic']
+    
+    # Calculate max change in 'n' from previous step
+    max_Δn = np.nanmax(np.abs(temp_n.loc[:, i] - temp_n.loc[:, i-1]))
+        
+    # Break out of loop if specified convergence is achieved
+    if max_Δn <= 0.01:
+        print(f'Step {i:2d}: max_Δn = {max_Δn:.5f}')
+        print(f'Convergence to Δn <=0.01 achieved after {i} iterations.')
+        break
+    elif i == 50:
+        print(f'Step {i:2d}: max_Δn = {max_Δn:.5f}')
+        print('Convergence to Δn <=0.01 not achieved. Calculation stopped after 50 iterations.')
+'''
 
 #st.dataframe(qc_kPa)
 
 
 # Plot ---------------------------------------------------
 zmax = np.nanmax(df.SCPT_DPTH)
+
+## Raw data: qc,fs,u2
 fig,ax = plt.subplots(1,3, figsize=(7,7))
 ax[0].plot(df.SCPT_RES,df.SCPT_DPTH,'.')
 ax[1].plot(df.SCPT_FRES,df.SCPT_DPTH,'.')
