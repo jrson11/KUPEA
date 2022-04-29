@@ -35,7 +35,6 @@ st.markdown('#### Importing Data')
 st.dataframe(df)
 df['SCPT_CPO'] = SCPT_CPO
 df['SCPT_CPOD'] = SCPT_CPOD
-st.dataframe(df)
 
 
 # Sidebar -----------------------------------
@@ -58,13 +57,15 @@ df['Isbt'] = Isbt
 qt_kPa = df.SCPT_QT*1000
 sv0_kPa = df.SCPT_CPO
 sv0e_kPa = df.SCPT_CPOD
-#qn_kPa = qt_kPa - sv0_kPa
+qn_kPa = qt_kPa - sv0_kPa
+## Preliminary calculation of Q_tn assuming n=1
+df.loc[:, 'n'] = 1.0 # Initial value set to n=1.0 as per Robertson (2009) Eq 7
+df.loc[:, 'Q_tn'] = (df.SCPT_QNET*1000./p_atm)*(p_atm/df.SCPT_CPOD)**df.n # Robertson (2009) Eq. 5
+df.loc[:, 'F_r'] = 100*df.SCPT_FRES/df.SCPT_QNET # Robertson (2009) Eq. 2
+df.loc[:, 'Ic'] = np.sqrt((3.47-np.log10(df.Q_tn))**2 + (1.22 + np.log10(df.F_r))**2) # Robertson (2009) Eq. 6
 '''
 #Preliminary calculation of Q_tn assuming n=1
-df.loc[:, 'n'] = 1.0 # Initial value set to n=1.0 as per Robertson (2009) Eq 7
-df.loc[:, 'Q_tn'] = (df.SCPT_QNET*1000./p_atm)*(p_atm/SCPT.SCPT_CPOD)**SCPT.n # Robertson (2009) Eq. 5
-df.loc[:, 'F_r'] = 100*SCPT.SCPT_FRES/SCPT.SCPT_QNET # Robertson (2009) Eq. 2
-df.loc[:, 'Ic'] = np.sqrt((3.47-np.log10(SCPT.Q_tn))**2 + (1.22 + np.log10(SCPT.F_r))**2) # Robertson (2009) Eq. 6
+
 
 # Initialize temporary dataframe to keep track of n and Ic values through the iteration process
 temp_n = pd.DataFrame()
