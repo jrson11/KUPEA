@@ -58,6 +58,7 @@ qt_kPa = df.SCPT_QT*1000
 sv0_kPa = df.SCPT_CPO
 sv0e_kPa = df.SCPT_CPOD
 qn_kPa = qt_kPa - sv0_kPa
+df[SCPT_QNET] = qn_kPa/1000
 ## Preliminary calculation of Q_tn assuming n=1
 df.loc[:, 'n'] = 1.0 # Initial value set to n=1.0 as per Robertson (2009) Eq 7
 df.loc[:, 'Q_tn'] = (df.SCPT_QNET*1000./Pa_kPa)*(Pa_kPa/df.SCPT_CPOD)**df.n # Robertson (2009) Eq. 5
