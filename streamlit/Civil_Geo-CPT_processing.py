@@ -35,6 +35,7 @@ st.markdown('#### Importing Data')
 st.dataframe(df)
 df['SCPT_CPO'] = SCPT_CPO
 df['SCPT_CPOD'] = SCPT_CPOD
+st.dataframe(df)
 
 
 # Sidebar -----------------------------------
