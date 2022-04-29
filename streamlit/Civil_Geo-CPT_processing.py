@@ -51,10 +51,10 @@ Isbt = np.array([np.sqrt((3.47-np.log10(x))**2 + (np.log10(y)+1.22)**2) for x,y 
 df['Isbt'] = Isbt
 #
 # 2. Ic before iteration
-qt_kPa = df.SCPT_QT*1000
-sv0_kPa = SCPT_CPO
-sv0e_kPa = SCPT_CPOD
-qn_kPa = qt_kPa - sv0_kPa
+#qt_kPa = df.SCPT_QT*1000
+#sv0_kPa = SCPT_CPO
+#sv0e_kPa = SCPT_CPOD
+#qn_kPa = qt_kPa - sv0_kPa
 '''
 #Preliminary calculation of Q_tn assuming n=1
 df.loc[:, 'n'] = 1.0 # Initial value set to n=1.0 as per Robertson (2009) Eq 7
