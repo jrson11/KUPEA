@@ -7,11 +7,11 @@ Technical Sessions
 
 - Jan.: How to transfer energy?(글공)
 - Feb.: How to control the FAB environment?(Alex) / 3상 전력을 쓰는 수학적 이유(글공)
-- Mar.: How it's make: Industrial gases(JJams) / 파이썬을 활용한 엑셀 사무자동화 v1(글로벌토목인)
-- Apr.
-- May.
-- Jun.
-- Jul.
+- Mar.: How it's make: Industrial gases(JJams) / 파이썬을 활용한 엑셀 사무자동화 v1(글토)
+- Apr.: 일본의 에너지 정책 (차송송) / 배관 EPC 프로세스 개요 (수마)
+- May.: 미국에서 소방 PE 취업 및 일하는 분야 (IKE) / How is a project going? (글공)
+- Jun.: Overview of UAE HVDC project (Dan) / 토목 in 에너지: submarine landslide (글토)
+- Jul.: Hydrogen: Is it the future energy for EVERYONE? (Jams J)
 - Aug.
 - Sep.
 - Oct.
